@@ -15,10 +15,9 @@ A neurodivergent-friendly school specialising in students with ADHD, ADD, Dyslex
 | Framework | Next.js 16 (App Router) |
 | Language | TypeScript |
 | Styling | Tailwind CSS v4 + CSS variables |
-| Forms | React Hook Form + Zod |
-| Email | Resend |
+| Forms | Netlify Forms (native, no backend required) |
 | Gallery | yet-another-react-lightbox |
-| Hosting | Vercel |
+| Hosting | Netlify (primary) · Vercel (secondary) |
 
 ---
 
@@ -73,18 +72,26 @@ public/               # Static assets (logo, images, audio)
 - Neurodivergent-friendly design (ADHD, Dyslexia, ADD)
 - School anthem player with pulse animation
 - Filterable gallery with lightbox
-- Contact & Book a Tour forms
+- Contact, Enrolment & Book a Tour forms (via Netlify Forms)
 - FAQ accordion
 - Open Graph / WhatsApp social sharing meta tags
 - Accessibility mode selector
+- Cookie consent banner
 
 ---
 
 ## Deployment
 
-Deployed automatically via [Vercel](https://vercel.com). Push to `main` triggers a production build.
+### Netlify (primary)
+Connected to the `main` branch on GitHub. Push to `main` triggers an automatic production build via `@netlify/plugin-nextjs`.
 
-Manual deploy:
+### Vercel (secondary)
+Also connected to `main`. Push to `main` also triggers a Vercel production build.
+
+Manual Vercel deploy:
 ```bash
 npx vercel --prod
 ```
+
+### Forms
+Contact forms use [Netlify Forms](https://docs.netlify.com/forms/setup/). Form submissions are captured automatically — no backend code required. The static detection file lives at `public/netlify-forms.html`.
