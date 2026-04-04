@@ -80,7 +80,8 @@ export default function ContactPage() {
                 >
                   Send Us a Message
                 </h2>
-                <form className="space-y-4" action="#" method="POST" noValidate>
+                <form className="space-y-4" name="contact-message" method="POST" data-netlify="true" noValidate>
+                  <input type="hidden" name="form-name" value="contact-message" />
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label
@@ -252,7 +253,8 @@ export default function ContactPage() {
                   Tell us a little about your child and we will be in touch to
                   guide you through the next steps.
                 </p>
-                <form className="space-y-4" action="#" method="POST" noValidate>
+                <form className="space-y-4" name="enrolment-enquiry" method="POST" data-netlify="true" noValidate>
+                  <input type="hidden" name="form-name" value="enrolment-enquiry" />
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label

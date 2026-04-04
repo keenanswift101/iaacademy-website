@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Netlify Form Detection</title></head>
+<body>
+
+  <!-- Contact: Send Us a Message -->
+  <form name="contact-message" data-netlify="true" hidden>
+    <input type="hidden" name="form-name" value="contact-message" />
+    <input type="text" name="name" />
+    <input type="tel" name="phone" />
+    <input type="email" name="email" />
+    <select name="subject"></select>
+    <textarea name="message"></textarea>
+  </form>
+
+  <!-- Contact: Quick Enrolment Enquiry -->
+  <form name="enrolment-enquiry" data-netlify="true" hidden>
+    <input type="hidden" name="form-name" value="enrolment-enquiry" />
+    <input type="text" name="student_name" />
+    <select name="grade"></select>
+    <input type="text" name="parent_name" />
+    <input type="tel" name="phone" />
+    <input type="email" name="email" />
+    <textarea name="needs"></textarea>
+  </form>
+
+  <!-- Book a Tour -->
+  <form name="book-a-tour" data-netlify="true" hidden>
+    <input type="hidden" name="form-name" value="book-a-tour" />
+    <input type="text" name="parent_name" />
+    <input type="tel" name="phone" />
+    <input type="email" name="email" />
+    <input type="text" name="child_name" />
+    <select name="grade"></select>
+    <input type="date" name="preferred_date" />
+    <textarea name="message"></textarea>
+  </form>
+
+</body>
+</html>

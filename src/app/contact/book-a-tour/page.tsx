@@ -93,7 +93,8 @@ export default function BookATourPage() {
                   business day to confirm a date and time.
                 </p>
 
-                <form className="space-y-4" action="#" method="POST" noValidate>
+                <form className="space-y-4" name="book-a-tour" method="POST" data-netlify="true" noValidate>
+                  <input type="hidden" name="form-name" value="book-a-tour" />
                   {/* Parent details */}
                   <fieldset>
                     <legend
