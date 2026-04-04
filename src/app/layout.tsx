@@ -21,12 +21,12 @@ export const metadata: Metadata = {
     template: "%s | Innovative Academics Academy",
   },
   description:
-    "IA Academy is a small-class Cambridge school in Windhoek specialising in students with ADHD, ADD, Dyslexia and learning differences. Grade R to Grade 12.",
+    "IA Academy is a small-class Namibian curriculum school in Windhoek specialising in students with ADHD, ADD, Dyslexia and learning differences. Grade R to Grade 12.",
   keywords: [
     "school Windhoek",
     "ADHD school Namibia",
     "dyslexia school Namibia",
-    "Cambridge school Windhoek",
+    "Namibian curriculum school Windhoek",
     "small class school Namibia",
     "learning difficulties school",
   ],
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Innovative Academics Academy",
     title: "Innovative Academics Academy | Windhoek, Namibia",
     description:
-      "IA Academy is a small-class Cambridge school in Windhoek specialising in students with ADHD, ADD, Dyslexia and learning differences. Grade R to Grade 12.",
+      "IA Academy is a small-class Namibian curriculum school in Windhoek specialising in students with ADHD, ADD, Dyslexia and learning differences. Grade R to Grade 12.",
     images: [
       {
         url: "https://iaacademyeduna.vercel.app/favicon.png",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Innovative Academics Academy | Windhoek, Namibia",
     description:
-      "IA Academy is a small-class Cambridge school in Windhoek specialising in students with ADHD, ADD, Dyslexia and learning differences. Grade R to Grade 12.",
+      "IA Academy is a small-class Namibian curriculum school in Windhoek specialising in students with ADHD, ADD, Dyslexia and learning differences. Grade R to Grade 12.",
     images: ["https://iaacademyeduna.vercel.app/favicon.png"],
   },
 };

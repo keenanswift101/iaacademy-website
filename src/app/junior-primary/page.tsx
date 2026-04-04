@@ -4,7 +4,7 @@ import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
   title: "Junior Primary — Grade 4 to Grade 7",
-  description: "IA Academy's Junior Primary phase covers Grade 4 to 7, supporting learners through the middle years with Cambridge curriculum and specialised learning support.",
+  description: "IA Academy's Junior Primary phase covers Grade 4 to 7, supporting learners through the middle years with the Namibian curriculum and specialised learning support.",
 };
 
 export default function JuniorPrimaryPage() {
@@ -34,7 +34,7 @@ export default function JuniorPrimaryPage() {
           </div>
           <div className="grid gap-6 sm:grid-cols-2">
             {[
-              { label: "Curriculum", href: "/junior-primary/curriculum", desc: "Cambridge curriculum per grade for Grades 4–7." },
+              { label: "Curriculum", href: "/junior-primary/curriculum", desc: "Namibian curriculum per grade for Grades 4–7." },
               { label: "Learning Support", href: "/junior-primary/learning-support", desc: "Support strategies as academic demands increase in the middle years." },
               { label: "Aftercare", href: "/junior-primary/aftercare", desc: "Aftercare availability, hours, and facilities." },
               { label: "Book a Tour", href: "/contact/book-a-tour", desc: "Visit our Junior Primary classrooms." },

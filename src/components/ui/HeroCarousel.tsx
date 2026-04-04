@@ -29,7 +29,7 @@ const slides = [
   {
     src: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1920&h=1080&fit=crop&q=80",
     alt: "Students engaged in a reading activity",
-    label: "Cambridge curriculum, delivered with care",
+    label: "Namibian curriculum, delivered with care",
   },
   {
     src: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=1920&h=1080&fit=crop&q=80",
@@ -159,8 +159,8 @@ export default function HeroCarousel() {
           className="mx-auto mb-10 max-w-xl text-lg leading-relaxed sm:text-xl"
           style={{ opacity: 0.88, textShadow: "0 1px 8px rgba(0,0,0,0.35)" }}
         >
-          Where every child&apos;s story matters. A safe, small-class Cambridge
-          school built for learners who need — and deserve — something different.
+          Where every child&apos;s story matters. A safe, small-class Namibian
+          curriculum school built for learners who need — and deserve — something different.
         </p>
 
         {/* Slide label — subtle caption */}

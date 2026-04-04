@@ -3,7 +3,7 @@ import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
   title: "Primary Curriculum — Grade R to 3",
-  description: "Cambridge-aligned Early Years and Lower Primary curriculum at IA Academy, supporting learners from Grade R through Grade 3.",
+  description: "Namibian curriculum — Early Years and Lower Primary at IA Academy, supporting learners from Grade R through Grade 3.",
 };
 
 export default function PrimaryCurriculumPage() {
@@ -12,7 +12,7 @@ export default function PrimaryCurriculumPage() {
       <PageHero
         label="Primary Phase"
         title="Curriculum — Grade R to 3"
-        description="A Cambridge-aligned Early Years and Lower Primary programme, delivered with the care and flexibility that young learners need."
+        description="A Namibian curriculum Early Years and Lower Primary programme, delivered with the care and flexibility that young learners need."
         breadcrumb={[{ label: "Primary", href: "/primary" }, { label: "Curriculum", href: "/primary/curriculum" }]}
       />
       <section className="px-6 py-16" style={{ background: "var(--color-surface)" }}>

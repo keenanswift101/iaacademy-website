@@ -21,8 +21,8 @@ const faqCategories = [
         a: "We intentionally limit each grade to a maximum of 10 students. This small-class model is central to our ability to provide personalised, one-on-one attention.",
       },
       {
-        q: "Do you follow the Namibian Cambridge curriculum?",
-        a: "Yes. IA Academy follows the Namibian Cambridge Curriculum from Grade R to Grade 12, including Cambridge IGCSE and AS Level offerings at the High School phase.",
+        q: "Do you follow the Namibian curriculum?",
+        a: "Yes. IA Academy follows the Namibian Curriculum from Grade R to Grade 12, including Cambridge IGCSE and AS Level offerings at the High School phase.",
       },
       {
         q: "Is IA Academy registered and accredited?",

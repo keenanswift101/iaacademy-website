@@ -48,7 +48,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#555" }}>
-            A Cambridge school in Windhoek, Namibia. Small classes, big hearts.
+            A Namibian curriculum school in Windhoek. Small classes, big hearts.
             Specialising in ADHD, ADD, Dyslexia and learning differences. Grade R – 12.
           </p>
           {/* Social icons */}

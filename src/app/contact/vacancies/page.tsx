@@ -29,7 +29,7 @@ const desiredQualities = [
   "Patient, empathetic, and relationship-driven",
   "Experienced with or open to learning about ADHD, ADD, Dyslexia, and slow learning",
   "Comfortable in a small, close-knit school community",
-  "Strong understanding of the Namibian Cambridge Curriculum",
+  "Strong understanding of the Namibian Curriculum",
   "Willing to collaborate closely with parents and specialist therapists",
 ];
 

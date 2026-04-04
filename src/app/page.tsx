@@ -42,7 +42,7 @@ const pillars = [
         <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/>
       </svg>
     ),
-    title: "Namibian Cambridge Curriculum",
+    title: "Namibian Curriculum",
     copy: "Grade R to Grade 12. A recognised, structured curriculum delivered in the calm, supportive environment your child deserves.",
   },
 ];

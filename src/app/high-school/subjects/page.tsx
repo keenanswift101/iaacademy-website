@@ -11,7 +11,7 @@ export default function HighSchoolSubjectsPage() {
       <PageHero
         label="High School Phase"
         title="Subject Choices"
-        description="IA Academy offers a range of subjects aligned to the Cambridge curriculum, designed to let learners pursue their strengths."
+        description="IA Academy offers a range of subjects aligned to the Namibian curriculum, designed to let learners pursue their strengths."
         breadcrumb={[{ label: "High School", href: "/high-school" }, { label: "Subjects", href: "/high-school/subjects" }]}
       />
       <section className="px-6 py-16" style={{ background: "var(--color-surface)" }}>

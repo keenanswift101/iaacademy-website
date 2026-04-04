@@ -4,7 +4,7 @@ import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
   title: "Primary Phase — Grade R to Grade 3",
-  description: "IA Academy's Primary Phase covers Grade R to Grade 3, offering a nurturing, small-class Cambridge curriculum with specialised learning support.",
+  description: "IA Academy's Primary Phase covers Grade R to Grade 3, offering a nurturing, small-class Namibian curriculum with specialised learning support.",
 };
 
 export default function PrimaryPage() {
@@ -21,7 +21,7 @@ export default function PrimaryPage() {
         <div className="mx-auto max-w-4xl">
           <div className="grid gap-6 sm:grid-cols-2">
             {[
-              { label: "Curriculum", href: "/primary/curriculum", desc: "Cambridge-aligned Early Years and Lower Primary curriculum." },
+              { label: "Curriculum", href: "/primary/curriculum", desc: "Namibian curriculum — Early Years and Lower Primary." },
               { label: "Learning Support", href: "/primary/learning-support", desc: "Early intervention and one-on-one strategies for young learners." },
               { label: "Daily Routine", href: "/primary/daily-routine", desc: "What a typical day looks like — structure that helps children thrive." },
               { label: "Book a Tour", href: "/contact/book-a-tour", desc: "Come and see the Primary classrooms for yourself." },

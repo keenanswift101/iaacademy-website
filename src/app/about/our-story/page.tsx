@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const milestones = [
   { year: "2013", title: "Founded", desc: "Innovative Academics Academy opened its doors in Windhoek, Namibia — built on the belief that every child deserves an education tailored to how they learn." },
   { year: "Today", title: "95 Students Strong", desc: "We remain intentionally small. With 95 students across Grade R to Grade 12 and a maximum of 10 learners per grade, every child is truly known." },
-  { year: "Ongoing", title: "Cambridge Curriculum", desc: "We deliver the Namibian Cambridge Curriculum, providing internationally recognised qualifications with a supportive, accessible approach." },
+  { year: "Ongoing", title: "Namibian Curriculum", desc: "We deliver the Namibian Curriculum, providing internationally recognised qualifications with a supportive, accessible approach." },
 ];
 
 export default function OurStoryPage() {

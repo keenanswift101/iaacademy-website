@@ -11,7 +11,7 @@ export default function JuniorPrimaryCurriculumPage() {
       <PageHero
         label="Junior Primary Phase"
         title="Curriculum — Grade 4 to 7"
-        description="Cambridge curriculum per grade for Grades 4 through 7 — structured, progressive, and fully supported."
+        description="Namibian curriculum per grade for Grades 4 through 7 — structured, progressive, and fully supported."
         breadcrumb={[{ label: "Junior Primary", href: "/junior-primary" }, { label: "Curriculum", href: "/junior-primary/curriculum" }]}
       />
       <section className="px-6 py-16" style={{ background: "var(--color-surface)" }}>

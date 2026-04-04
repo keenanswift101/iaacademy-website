@@ -27,7 +27,7 @@ const pillars = [
     body: "Our staff are trained in neurodivergent-aware teaching strategies. They don't just accommodate differences — they build on them.",
   },
   {
-    title: "Cambridge Namibian Curriculum",
+    title: "Namibian Curriculum",
     body: "All of this within a structured, internationally recognised curriculum. Your child is fully prepared for the next step, whatever that looks like.",
   },
 ];
