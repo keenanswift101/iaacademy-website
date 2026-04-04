@@ -10,7 +10,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const pathname = usePathname();
-  const navRef = useRef<HTMLElement>(null);
+  const navRef = useRef<HTMLElement>(null); // attached to <header>
 
   // Close dropdown on outside click
   useEffect(() => {
@@ -31,8 +31,15 @@ export default function Navbar() {
     /* eslint-enable react-hooks/set-state-in-effect */
   }, [pathname]);
 
+  function handleMobileNavClick() {
+    setMobileOpen(false);
+    setOpenDropdown(null);
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }
+
   return (
     <header
+      ref={navRef}
       className="sticky top-0 z-40 w-full"
       style={{
         background: "rgba(249,249,252,0.85)",
@@ -86,7 +93,7 @@ export default function Navbar() {
       </div>
 
       {/* Main nav */}
-      <nav ref={navRef} aria-label="Main navigation" className="flex items-center justify-between px-4 md:px-6 h-16">
+      <nav aria-label="Main navigation" className="flex items-center justify-between px-4 md:px-6 h-16">
         {/* Logo */}
         <Link href="/" aria-label="Innovative Academics Academy — Home" className="flex items-center gap-3 shrink-0">
           <div className="relative flex-shrink-0 rounded-full flex items-center justify-center" style={{ width: 56, height: 56, background: "#000000", boxShadow: "0 2px 12px rgba(0,0,0,0.4)" }}>
@@ -206,7 +213,7 @@ export default function Navbar() {
       {mobileOpen && (
         <div
           id="mobile-menu"
-          className="lg:hidden fixed inset-0 top-16 z-30 overflow-y-auto"
+          className="lg:hidden absolute top-full left-0 right-0 z-50 overflow-y-auto max-h-[calc(100dvh-4rem)] shadow-2xl"
           style={{ background: "var(--color-surface-white)" }}
         >
           <nav aria-label="Mobile navigation" className="px-4 py-6 space-y-1">
@@ -237,6 +244,7 @@ export default function Navbar() {
                           <li key={child.href}>
                             <Link
                               href={child.href}
+                              onClick={handleMobileNavClick}
                               className="block px-4 py-2.5 rounded-lg text-sm"
                               style={{ color: "var(--color-on-surface-muted)" }}
                             >
@@ -250,6 +258,7 @@ export default function Navbar() {
                 ) : (
                   <Link
                     href={item.href}
+                    onClick={handleMobileNavClick}
                     className="block px-4 py-3 rounded-xl text-base font-medium"
                     style={{ color: "var(--color-on-surface)" }}
                   >
@@ -261,6 +270,7 @@ export default function Navbar() {
             <div className="pt-4 flex flex-col gap-3">
               <Link
                 href="/contact/book-a-tour"
+                onClick={handleMobileNavClick}
                 className="flex items-center justify-center px-4 py-3 rounded-full font-semibold text-sm btn-gold-metal"
                 style={{ background: "var(--color-gold)", color: "var(--color-on-surface)" }}
               >
@@ -268,6 +278,7 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/admissions"
+                onClick={handleMobileNavClick}
                 className="flex items-center justify-center px-4 py-3 rounded-full font-semibold text-sm btn-liquid-glass"
               >
                 Apply Now

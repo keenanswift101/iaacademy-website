@@ -12,7 +12,7 @@ export default function PageRails() {
     <div
       aria-hidden="true"
       style={{ position: "fixed", inset: 0, pointerEvents: "none", zIndex: 0 }}
-      className="block"
+      className="hidden md:block"
     >
       {/* ── LEFT — purple metallic organic curves ── */}
       <svg
@@ -110,7 +110,7 @@ export default function PageRails() {
       <svg
         viewBox="0 0 80 1000"
         preserveAspectRatio="none"
-        className="hidden lg:block lg:w-14.5 xl:w-[clamp(70px,8vw,120px)]"
+        className="block w-4.5 sm:w-6.5 md:w-9.5 lg:w-14.5 xl:w-[clamp(70px,8vw,120px)]"
         style={{
           position: "absolute",
           right: 6,

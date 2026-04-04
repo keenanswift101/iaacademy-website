@@ -182,55 +182,46 @@ export default function HeroCarousel() {
             Book a Tour
           </Link>
           <Link
-            href="/about/our-approach"
+            href="/admissions/faq"
             className="inline-flex h-14 min-w-[180px] items-center justify-center rounded-full px-8 text-base font-semibold focus-visible:ring-2 focus-visible:ring-white btn-liquid-glass-light"
           >
-            Our Approach
+            Have Questions?
           </Link>
         </div>
-      </div>
 
-      {/* ── DOT INDICATORS ────────────────────── */}
-      <div
-        className="absolute bottom-20 left-1/2 -translate-x-1/2 flex items-center gap-2"
-        style={{
-          zIndex: 30,
-          background: "rgba(0,0,0,0.30)",
-          backdropFilter: "blur(6px)",
-          WebkitBackdropFilter: "blur(6px)",
-          borderRadius: "9999px",
-          padding: "10px 16px",
-          border: "1px solid rgba(255,255,255,0.18)",
-        }}
-        role="tablist"
-        aria-label="Slide indicators"
-      >
-        {slides.map((_, idx) => (
-          <button
-            key={idx}
-            role="tab"
-            aria-selected={idx === active}
-            aria-label={`Go to slide ${idx + 1}: ${slides[idx].label}`}
-            onClick={() => { goTo(idx); setPaused(true); }}
-            className="transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
-            style={{
-              width: idx === active ? "28px" : "10px",
-              height: "10px",
-              borderRadius: "9999px",
-              background: idx === active ? "#ffffff" : "rgba(255,255,255,0.55)",
-              border: idx === active ? "none" : "1px solid rgba(255,255,255,0.40)",
-              boxShadow: idx === active ? "0 0 8px rgba(255,255,255,0.70)" : "none",
-              cursor: "pointer",
-            }}
-          />
-        ))}
+        {/* ── DOT INDICATORS ─────────────────── */}
+        <div
+          className="mt-8 flex items-center justify-center gap-2"
+          role="tablist"
+          aria-label="Slide indicators"
+        >
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              role="tab"
+              aria-selected={idx === active}
+              aria-label={`Go to slide ${idx + 1}: ${slides[idx].label}`}
+              onClick={() => { goTo(idx); setPaused(true); }}
+              className="transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+              style={{
+                width: idx === active ? "28px" : "10px",
+                height: "10px",
+                borderRadius: "9999px",
+                background: idx === active ? "#ffffff" : "rgba(255,255,255,0.55)",
+                border: idx === active ? "none" : "1px solid rgba(255,255,255,0.40)",
+                boxShadow: idx === active ? "0 0 8px rgba(255,255,255,0.70)" : "none",
+                cursor: "pointer",
+              }}
+            />
+          ))}
+        </div>
       </div>
 
       {/* ── PREV / NEXT ARROWS ────────────────── */}
       <button
         onClick={() => { prev(); setPaused(true); }}
         aria-label="Previous slide"
-        className="absolute left-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full backdrop-blur-sm transition-all hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white md:left-8"
+        className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full backdrop-blur-sm transition-all hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white md:left-8"
         style={{
           zIndex: 20,
           background: "rgba(255,255,255,0.12)",
@@ -246,7 +237,7 @@ export default function HeroCarousel() {
       <button
         onClick={() => { next(); setPaused(true); }}
         aria-label="Next slide"
-        className="absolute right-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full backdrop-blur-sm transition-all hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white md:right-8"
+        className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full backdrop-blur-sm transition-all hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white md:right-8"
         style={{
           zIndex: 20,
           background: "rgba(255,255,255,0.12)",
@@ -275,7 +266,7 @@ export default function HeroCarousel() {
         >
           <defs>
             <linearGradient id="wave-fade" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#9c27b0" stopOpacity="0.18" />
+              <stop offset="0%" stopColor="#f9f9fc" stopOpacity="0.6" />
               <stop offset="100%" stopColor="#f9f9fc" stopOpacity="1" />
             </linearGradient>
           </defs>

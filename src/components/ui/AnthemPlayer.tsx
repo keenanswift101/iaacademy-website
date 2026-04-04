@@ -118,16 +118,24 @@ export default function AnthemPlayer() {
         </span>
 
         {/* Play / Pause */}
-        <button
-          onClick={toggle}
-          aria-label={playing ? "Pause anthem" : "Play anthem"}
-          className="flex h-12 w-12 items-center justify-center rounded-full transition-all hover:scale-105 focus-visible:ring-2 focus-visible:ring-offset-2"
-          style={{
-            background: "var(--color-primary)",
-            color: "#fff",
-            boxShadow: "0 8px 24px rgba(94,0,129,0.35)",
-          }}
-        >
+        <div className="relative flex items-center justify-center">
+          {playing && (
+            <span
+              className="absolute inline-flex h-12 w-12 rounded-full animate-ping"
+              style={{ background: "rgba(94,0,129,0.30)" }}
+              aria-hidden="true"
+            />
+          )}
+          <button
+            onClick={toggle}
+            aria-label={playing ? "Pause anthem" : "Play anthem"}
+            className="relative flex h-12 w-12 items-center justify-center rounded-full transition-all hover:scale-105 focus-visible:ring-2 focus-visible:ring-offset-2"
+            style={{
+              background: "var(--color-primary)",
+              color: "#fff",
+              boxShadow: playing ? "0 8px 32px rgba(94,0,129,0.55)" : "0 8px 24px rgba(94,0,129,0.35)",
+            }}
+          >
           {playing ? (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width={20} height={20} aria-hidden="true">
               <path d="M6 4h4v16H6zm8 0h4v16h-4z"/>
@@ -137,7 +145,8 @@ export default function AnthemPlayer() {
               <path d="M5 3l14 9-14 9V3z"/>
             </svg>
           )}
-        </button>
+          </button>
+        </div>
 
         <span className="text-xs tabular-nums" style={{ color: "var(--color-on-surface-variant)" }}>
           {fmt(duration)}

@@ -77,21 +77,10 @@ export default function AccessibilityModeSelector() {
     if (typeof window === "undefined") return "standard";
     return (localStorage.getItem(STORAGE_KEY) as Mode) ?? "standard";
   });
-  const [showModal, setShowModal] = useState(false);
-
   // Sync mode to DOM attribute whenever current changes
   useEffect(() => {
     document.documentElement.dataset.mode = current === "standard" ? "" : current;
   }, [current]);
-
-  // First-visit: show modal only if no saved preference
-  useEffect(() => {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (!saved) {
-      const t = setTimeout(() => setShowModal(true), 2000);
-      return () => clearTimeout(t);
-    }
-  }, []);
 
   function applyMode(mode: Mode) {
     localStorage.setItem(STORAGE_KEY, mode);
@@ -100,7 +89,6 @@ export default function AccessibilityModeSelector() {
 
   function select(mode: Mode) {
     applyMode(mode);
-    setShowModal(false);
     setOpen(false);
   }
 
@@ -121,7 +109,7 @@ export default function AccessibilityModeSelector() {
         <div
           role="dialog"
           aria-label="Reading settings"
-          className="fixed bottom-40 left-4 z-50 rounded-2xl p-4 w-72 shadow-2xl"
+          className="fixed bottom-40 left-4 z-50 rounded-2xl p-4 w-[calc(100vw-2rem)] max-w-72 shadow-2xl max-h-[70dvh] overflow-y-auto"
           style={{ background: "var(--color-surface-white)", border: "1px solid var(--color-surface-high)" }}
         >
           <p className="text-xs font-semibold uppercase tracking-wide mb-1" style={{ color: "var(--color-primary)" }}>
@@ -177,104 +165,6 @@ export default function AccessibilityModeSelector() {
         </div>
       )}
 
-      {/* First-visit modal */}
-      {showModal && (
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="mode-modal-title"
-          className="fixed inset-0 z-9998 flex items-end sm:items-center justify-center p-4"
-          style={{ background: "rgba(0,0,0,0.4)" }}
-          onClick={(e) => { if (e.target === e.currentTarget) setShowModal(false); }}
-        >
-          <div
-            className="rounded-2xl w-full max-w-md shadow-2xl overflow-hidden"
-            style={{ background: "var(--color-surface-white)" }}
-          >
-            {/* Header banner */}
-            <div
-              className="px-6 pt-6 pb-5"
-              style={{ background: "linear-gradient(135deg, rgba(94,0,129,0.08) 0%, rgba(240,192,64,0.07) 100%)" }}
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div
-                  className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 font-bold text-sm"
-                  style={{ background: "var(--color-primary)", color: "#fff" }}
-                >
-                  Aa
-                </div>
-                <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: "var(--color-primary)" }}>
-                  Reading Support
-                </p>
-              </div>
-              <h2 id="mode-modal-title" className="text-lg font-bold leading-snug mb-1" style={{ color: "var(--color-on-surface)" }}>
-                We&rsquo;ve built this site around your child.
-              </h2>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--color-on-surface-muted)" }}>
-                IA Academy serves learners with ADHD, Dyslexia, ADD, and slow processing. This site can adapt its layout to match your child&rsquo;s reading needs — right now, before you read a single word.
-              </p>
-            </div>
-
-            {/* Mode list */}
-            <div className="px-6 py-4">
-              <p className="text-xs font-semibold mb-3 uppercase tracking-wide" style={{ color: "var(--color-on-surface-muted)" }}>
-                Choose a reading layout
-              </p>
-              <ul className="space-y-2" role="listbox">
-                {modes.map((m) => (
-                  <li key={m.value}>
-                    <button
-                      role="option"
-                      aria-selected={false}
-                      onClick={() => select(m.value)}
-                      className="w-full text-left rounded-xl px-3 py-3 text-sm flex items-center gap-3 transition-all hover:shadow-sm"
-                      style={{ background: "var(--color-surface-low)", border: "1px solid transparent" }}
-                      onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(94,0,129,0.20)"; }}
-                      onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.borderColor = "transparent"; }}
-                    >
-                      <span
-                        className="shrink-0 w-8 h-8 rounded-lg flex items-center justify-center"
-                        style={{ background: "rgba(94,0,129,0.10)", color: "var(--color-primary)" }}
-                      >
-                        {m.icon}
-                      </span>
-                      <span className="flex-1 min-w-0">
-                        <span className="block font-semibold text-sm" style={{ color: "var(--color-on-surface)" }}>
-                          {m.label}
-                        </span>
-                        <span className="block text-xs mt-0.5" style={{ color: "var(--color-on-surface-muted)" }}>
-                          {m.helpsWith} &mdash; {m.desc}
-                        </span>
-                      </span>
-                      <svg viewBox="0 0 8 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-2 h-3 shrink-0 opacity-30">
-                        <path d="M1 1l5 5-5 5" />
-                      </svg>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Footer */}
-            <div className="px-6 pb-5 space-y-3">
-              <div
-                className="rounded-xl px-4 py-3 text-xs leading-relaxed"
-                style={{ background: "rgba(94,0,129,0.05)", color: "var(--color-on-surface-muted)" }}
-              >
-                <span className="font-semibold" style={{ color: "var(--color-primary)" }}>Why this matters: </span>
-                Research shows that small adjustments to text spacing, contrast, and motion can significantly reduce reading effort for learners with learning differences. We apply the same care here as we do in our classrooms.
-              </div>
-              <button
-                onClick={() => { setShowModal(false); localStorage.setItem(STORAGE_KEY, "standard"); }}
-                className="w-full text-sm py-2.5 rounded-xl font-medium transition-opacity hover:opacity-70"
-                style={{ color: "var(--color-on-surface-muted)" }}
-              >
-                Continue with default layout
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 }

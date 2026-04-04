@@ -4,7 +4,6 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AccessibilityModeSelector from "@/components/accessibility/AccessibilityModeSelector";
-import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import PageRails from "@/components/ui/PageRails";
 import CookieConsent from "@/components/ui/CookieConsent";
@@ -34,7 +33,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_NA",
+    url: "https://iaacademyeduna.vercel.app",
     siteName: "Innovative Academics Academy",
+    title: "Innovative Academics Academy | Windhoek, Namibia",
+    description:
+      "IA Academy is a small-class Cambridge school in Windhoek specialising in students with ADHD, ADD, Dyslexia and learning differences. Grade R to Grade 12.",
+    images: [
+      {
+        url: "https://iaacademyeduna.vercel.app/favicon.png",
+        width: 512,
+        height: 512,
+        alt: "IA Academy — Innovative Academics Academy",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Innovative Academics Academy | Windhoek, Namibia",
+    description:
+      "IA Academy is a small-class Cambridge school in Windhoek specialising in students with ADHD, ADD, Dyslexia and learning differences. Grade R to Grade 12.",
+    images: ["https://iaacademyeduna.vercel.app/favicon.png"],
   },
 };
 
@@ -64,7 +82,6 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <WhatsAppFloat />
         <ScrollToTop />
         <AccessibilityModeSelector />
         <CookieConsent />

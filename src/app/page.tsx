@@ -74,9 +74,9 @@ export default function HomePage() {
               <Image
                 src="/favicon.png"
                 alt=""
-                width={52}
-                height={52}
-                className="object-contain"
+                width={80}
+                height={80}
+                className="object-contain w-20 h-20 sm:w-14 sm:h-14"
                 aria-hidden="true"
               />
             </div>
@@ -317,7 +317,7 @@ export default function HomePage() {
                   }}
                   aria-hidden="true"
                 />
-                <div className="flex h-full items-center justify-center" style={{ position: "relative", zIndex: 1 }}>
+                <div className="flex h-full flex-col items-center justify-center gap-2" style={{ position: "relative", zIndex: 1 }}>
                   {/* Logo — black circle like hero */}
                   <div
                     style={{
@@ -331,6 +331,7 @@ export default function HomePage() {
                   >
                     <Image src="/logo-trns.png" alt="" width={50} height={50} className="object-contain" aria-hidden="true" />
                   </div>
+                  <p className="text-xs font-medium text-center px-2" style={{ color: "rgba(94,0,129,0.55)", lineHeight: 1.3 }}>Photos<br />coming soon</p>
                 </div>
               </div>
             ))}
