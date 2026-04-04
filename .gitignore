@@ -41,3 +41,10 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+
+# Large media files at root (served copies live in /public)
+IA Academy School anthem.mp3
+IA Academy School anthem.mpeg
+
+# Planning / design docs
+.planning/
