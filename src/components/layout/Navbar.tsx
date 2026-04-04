@@ -65,7 +65,7 @@ export default function Navbar() {
             WhatsApp
           </a>
           <a
-            href="https://facebook.com/"
+            href="https://www.facebook.com/share/1HBS1irvE1/?mibextid=wwXIfr"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
@@ -74,7 +74,7 @@ export default function Navbar() {
             Facebook
           </a>
           <a
-            href="https://instagram.com/"
+            href="https://www.instagram.com/ia_academy_1?igsh=MXVxNGdxdzVvdG5xYg%3D%3D&utm_source=qr"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
