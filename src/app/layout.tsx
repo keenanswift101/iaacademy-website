@@ -20,6 +20,11 @@ export const metadata: Metadata = {
     default: "Innovative Academics Academy | Windhoek, Namibia",
     template: "%s | Innovative Academics Academy",
   },
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   description:
     "IA Academy is a small-class Namibian curriculum school in Windhoek specialising in students with ADHD, ADD, Dyslexia and learning differences. Grade R to Grade 12.",
   keywords: [
