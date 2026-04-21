@@ -175,11 +175,11 @@ export default function HeroCarousel() {
 
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Link
-            href="/contact/book-a-tour"
+            href="/admissions/request-meeting"
             className="inline-flex h-14 min-w-[180px] items-center justify-center rounded-full px-8 text-base font-semibold transition-all hover:scale-105 focus-visible:ring-2 focus-visible:ring-white btn-gold-metal"
             style={{ background: "#f0c040", color: "#1a1c1e" }}
           >
-            Book a Tour
+            Request Meeting
           </Link>
           <Link
             href="/admissions/faq"

@@ -188,11 +188,11 @@ export default function Navbar() {
         {/* Book a Tour CTA + hamburger */}
         <div className="flex items-center gap-3">
           <Link
-            href="/contact/book-a-tour"
+            href="/admissions/request-meeting"
             className="hidden sm:inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold transition-opacity btn-gold-metal"
             style={{ background: "var(--color-gold)", color: "var(--color-on-surface)" }}
           >
-            Book a Tour
+            Request Meeting
           </Link>
           <button
             aria-expanded={mobileOpen}
@@ -269,12 +269,12 @@ export default function Navbar() {
             ))}
             <div className="pt-4 flex flex-col gap-3">
               <Link
-                href="/contact/book-a-tour"
+                href="/admissions/request-meeting"
                 onClick={handleMobileNavClick}
                 className="flex items-center justify-center px-4 py-3 rounded-full font-semibold text-sm btn-gold-metal"
                 style={{ background: "var(--color-gold)", color: "var(--color-on-surface)" }}
               >
-                Book a Tour
+                Request Meeting
               </Link>
               <Link
                 href="/admissions"
