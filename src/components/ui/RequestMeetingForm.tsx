@@ -44,10 +44,14 @@ export default function RequestMeetingForm() {
     const data = new FormData(form);
 
     try {
+      const encoded = new URLSearchParams();
+      data.forEach((value, key) => {
+        encoded.append(key, value.toString());
+      });
       await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
+        body: encoded.toString(),
       });
       setFirstName((data.get("first_name") as string) || "");
       setSubmitted(true);
