@@ -48,7 +48,7 @@ export default function RequestMeetingForm() {
       data.forEach((value, key) => {
         encoded.append(key, value.toString());
       });
-      await fetch("/", {
+      await fetch("/netlify-forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encoded.toString(),
