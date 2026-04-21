@@ -52,6 +52,7 @@ export const navItems: NavItem[] = [
     href: "/admissions",
     children: [
       { label: "How to Apply", href: "/admissions" },
+      { label: "Request a Meeting", href: "/admissions/request-meeting", description: "Book a one-on-one consultation" },
       { label: "School Fees", href: "/admissions/fees" },
       { label: "Term Dates", href: "/admissions/term-dates" },
       { label: "FAQ", href: "/admissions/faq" },

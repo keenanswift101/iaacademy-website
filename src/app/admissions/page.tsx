@@ -58,18 +58,18 @@ export default function AdmissionsPage() {
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Link
-              href="/contact/book-a-tour"
+              href="/admissions/request-meeting"
               className="inline-flex h-12 flex-1 items-center justify-center rounded-full px-6 text-sm font-semibold transition-transform hover:scale-105 focus-visible:ring-2"
               style={{ background: "var(--color-primary)", color: "var(--color-on-primary)" }}
             >
-              Book a Tour
+              Request a Meeting
             </Link>
             <Link
-              href="/contact"
+              href="/contact/book-a-tour"
               className="inline-flex h-12 flex-1 items-center justify-center rounded-full px-6 text-sm font-semibold transition-transform hover:scale-105 focus-visible:ring-2"
-              style={{ background: "var(--color-primary)", color: "var(--color-on-primary)" }}
+              style={{ background: "var(--color-gold)", color: "var(--color-on-surface)" }}
             >
-              Contact Us
+              Book a Tour
             </Link>
           </div>
         </div>
