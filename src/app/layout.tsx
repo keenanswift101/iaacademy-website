@@ -35,29 +35,30 @@ export const metadata: Metadata = {
     "small class school Namibia",
     "learning difficulties school",
   ],
+  metadataBase: new URL("https://ia-academy.org"),
   openGraph: {
     type: "website",
     locale: "en_NA",
-    url: "https://iaacademyeduna.vercel.app",
+    url: "https://ia-academy.org",
     siteName: "Innovative Academics Academy",
     title: "Innovative Academics Academy | Windhoek, Namibia",
     description:
       "IA Academy is a small-class Namibian curriculum school in Windhoek specialising in students with ADHD, ADD, Dyslexia and learning differences. Grade R to Grade 12.",
     images: [
       {
-        url: "https://iaacademyeduna.vercel.app/favicon.png",
-        width: 512,
-        height: 512,
-        alt: "IA Academy — Innovative Academics Academy",
+        url: "https://ia-academy.org/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "IA Academy — Innovative Academics Academy, Windhoek, Namibia",
       },
     ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Innovative Academics Academy | Windhoek, Namibia",
     description:
       "IA Academy is a small-class Namibian curriculum school in Windhoek specialising in students with ADHD, ADD, Dyslexia and learning differences. Grade R to Grade 12.",
-    images: ["https://iaacademyeduna.vercel.app/favicon.png"],
+    images: ["https://ia-academy.org/og-image.png"],
   },
 };
 
