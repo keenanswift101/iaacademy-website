@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build && cp public/netlify-forms.html .next/netlify-forms.html"
+  command = "npm run build && cp -r public/. .next/"
   publish = ".next"
 
 [[plugins]]
