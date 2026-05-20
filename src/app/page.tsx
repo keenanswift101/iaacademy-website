@@ -47,13 +47,13 @@ const pillars = [
   },
 ];
 
-const galleryPlaceholders = [
-  { label: "Classroom activity", aspect: "aspect-[4/3]" },
-  { label: "Outdoor learning", aspect: "aspect-square" },
-  { label: "Student reading session", aspect: "aspect-[4/3]" },
-  { label: "Arts and creativity", aspect: "aspect-square" },
-  { label: "Group collaboration", aspect: "aspect-[4/3]" },
-  { label: "Campus grounds", aspect: "aspect-[4/3]" },
+const galleryPreview = [
+  { src: "/images/school-life-02.jpeg", alt: "Classroom life at IA Academy" },
+  { src: "/images/school-life-03.jpeg", alt: "Learning at IA Academy" },
+  { src: "/images/school-life-04.jpeg", alt: "Students at IA Academy" },
+  { src: "/images/school-life-05.jpeg", alt: "School activities" },
+  { src: "/images/school-life-06.jpeg", alt: "Pupils learning together" },
+  { src: "/images/school-life-07.jpeg", alt: "IA Academy school life" },
 ];
 
 export default function HomePage() {
@@ -123,39 +123,17 @@ export default function HomePage() {
       >
         <div className="mx-auto max-w-5xl">
           <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-16">
-            {/* Photo placeholder */}
-            <div className="w-full overflow-hidden rounded-2xl lg:w-5/12" style={{ boxShadow: "var(--shadow-ambient)", position: "relative" }}>
-              <div
-                className="flex aspect-4/5 items-center justify-center"
-                style={{ background: "var(--color-surface-container)", position: "relative", overflow: "hidden" }}
-                role="img"
-                aria-label="IA Academy classroom environment photo (coming soon)"
-              >
-                {/* Calming pulse overlay */}
-                <div
-                  className="calm-pulse"
-                  style={{
-                    position: "absolute", inset: 0,
-                    background: "radial-gradient(ellipse at center, rgba(94,0,129,0.15) 0%, rgba(94,0,129,0) 70%)",
-                    pointerEvents: "none",
-                  }}
-                  aria-hidden="true"
-                />
-                {/* Logo — black circle like hero */}
-                <div
-                  style={{
-                    position: "relative", zIndex: 1,
-                    width: 110, height: 110,
-                    background: "#000000",
-                    borderRadius: "9999px",
-                    border: "2px solid rgba(240,192,64,0.55)",
-                    boxShadow: "0 8px 32px rgba(0,0,0,0.45)",
-                    display: "flex", alignItems: "center", justifyContent: "center",
-                  }}
-                >
-                  <Image src="/logo-trns.png" alt="" width={88} height={88} className="object-contain" aria-hidden="true" />
-                </div>
-              </div>
+            {/* Photo */}
+            <div className="w-full overflow-hidden rounded-2xl lg:w-5/12" style={{ boxShadow: "var(--shadow-ambient)" }}>
+              <Image
+                src="/images/school-life-01.jpeg"
+                alt="Pupils at IA Academy"
+                width={600}
+                height={750}
+                className="w-full h-auto object-cover"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                priority
+              />
             </div>
 
             {/* Text */}
@@ -248,7 +226,7 @@ export default function HomePage() {
                 tag: "Parent of a Grade 5 learner",
               },
               {
-                quote: "The teachers here actually understand ADHD. They don&apos;t just tolerate it — they know how to work with it. I finally feel like my daughter belongs.",
+                quote: "The teachers here actually understand ADHD. They don't just tolerate it — they know how to work with it. I finally feel like my daughter belongs.",
                 name: "A Windhoek parent",
                 tag: "Parent of a Grade 8 learner",
               },
@@ -299,40 +277,19 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-            {galleryPlaceholders.map(({ label, aspect }) => (
+            {galleryPreview.map(({ src, alt }) => (
               <div
-                key={label}
-                className={`overflow-hidden rounded-2xl ${aspect}`}
-                style={{ background: "var(--color-surface-container)", boxShadow: "var(--shadow-ambient)", position: "relative", border: "1px solid rgba(94,0,129,0.22)" }}
-                role="img"
-                aria-label={`${label} — photo coming soon`}
+                key={src}
+                className="relative aspect-4/3 overflow-hidden rounded-2xl"
+                style={{ boxShadow: "var(--shadow-ambient)", border: "1px solid rgba(94,0,129,0.15)" }}
               >
-                {/* Calming pulse overlay */}
-                <div
-                  className="calm-pulse"
-                  style={{
-                    position: "absolute", inset: 0,
-                    background: "radial-gradient(ellipse at center, rgba(94,0,129,0.12) 0%, rgba(94,0,129,0) 70%)",
-                    pointerEvents: "none",
-                  }}
-                  aria-hidden="true"
+                <Image
+                  src={src}
+                  alt={alt}
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 640px) 50vw, 33vw"
                 />
-                <div className="flex h-full flex-col items-center justify-center gap-2" style={{ position: "relative", zIndex: 1 }}>
-                  {/* Logo — black circle like hero */}
-                  <div
-                    style={{
-                      width: 64, height: 64,
-                      background: "#000000",
-                      borderRadius: "9999px",
-                      border: "2px solid rgba(240,192,64,0.45)",
-                      boxShadow: "0 4px 16px rgba(0,0,0,0.4)",
-                      display: "flex", alignItems: "center", justifyContent: "center",
-                    }}
-                  >
-                    <Image src="/logo-trns.png" alt="" width={50} height={50} className="object-contain" aria-hidden="true" />
-                  </div>
-                  <p className="text-xs font-medium text-center px-2" style={{ color: "rgba(94,0,129,0.55)", lineHeight: 1.3 }}>Photos<br />coming soon</p>
-                </div>
               </div>
             ))}
           </div>

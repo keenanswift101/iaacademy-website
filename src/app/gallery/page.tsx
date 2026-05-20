@@ -8,18 +8,18 @@ export const metadata: Metadata = {
 };
 
 const galleryItems = [
-  { id: 1, label: "Classroom environment", aspect: "aspect-[4/3]" },
-  { id: 2, label: "Children studying together", aspect: "aspect-[3/4]" },
-  { id: 3, label: "One-on-one learning", aspect: "aspect-[4/3]" },
-  { id: 4, label: "Reading and books", aspect: "aspect-square" },
-  { id: 5, label: "School activities", aspect: "aspect-[4/3]" },
-  { id: 6, label: "Group work", aspect: "aspect-[3/4]" },
-  { id: 7, label: "Creative learning", aspect: "aspect-[4/3]" },
-  { id: 8, label: "Arts and creativity", aspect: "aspect-square" },
-  { id: 9, label: "Teacher support", aspect: "aspect-[3/4]" },
-  { id: 10, label: "Student focus", aspect: "aspect-[4/3]" },
-  { id: 11, label: "Campus grounds", aspect: "aspect-[4/3]" },
-  { id: 12, label: "Group collaboration", aspect: "aspect-square" },
+  { src: "/images/school-life-01.jpeg", alt: "Pupils at IA Academy" },
+  { src: "/images/school-life-02.jpeg", alt: "Classroom life at IA Academy" },
+  { src: "/images/school-life-03.jpeg", alt: "Learning at IA Academy" },
+  { src: "/images/school-life-04.jpeg", alt: "Students at IA Academy" },
+  { src: "/images/school-life-05.jpeg", alt: "School activities" },
+  { src: "/images/school-life-06.jpeg", alt: "Pupils learning together" },
+  { src: "/images/school-life-07.jpeg", alt: "IA Academy school life" },
+  { src: "/images/school-life-08.jpeg", alt: "Creative learning at IA Academy" },
+  { src: "/images/school-life-09.jpeg", alt: "Students at work" },
+  { src: "/images/school-life-10.jpeg", alt: "School environment" },
+  { src: "/images/school-life-11.jpeg", alt: "Pupils at IA Academy" },
+  { src: "/images/school-life-12.jpeg", alt: "Life at IA Academy" },
 ];
 
 export default function GalleryPage() {
@@ -34,28 +34,23 @@ export default function GalleryPage() {
 
       <section className="px-6 py-16" style={{ background: "var(--color-surface)" }}>
         <div className="mx-auto max-w-5xl">
-          <div className="columns-2 gap-4 sm:columns-3 lg:columns-4">
-            {galleryItems.map(({ id, label, aspect }) => (
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+            {galleryItems.map(({ src, alt }) => (
               <div
-                key={id}
-                className={`mb-4 overflow-hidden rounded-2xl break-inside-avoid ${aspect}`}
-                style={{ background: "var(--color-surface-container)", boxShadow: "var(--shadow-ambient)", position: "relative", border: "1px solid rgba(94,0,129,0.22)" }}
-                role="img"
-                aria-label={`${label} — photo coming soon`}
+                key={src}
+                className="relative aspect-4/3 overflow-hidden rounded-2xl"
+                style={{ boxShadow: "var(--shadow-ambient)", border: "1px solid rgba(94,0,129,0.15)" }}
               >
-                <div className="calm-pulse" style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at center, rgba(94,0,129,0.12) 0%, rgba(94,0,129,0) 70%)", pointerEvents: "none" }} aria-hidden="true" />
-                <div className="flex h-full flex-col items-center justify-center gap-2" style={{ position: "relative", zIndex: 1 }}>
-                  <div style={{ width: 56, height: 56, background: "#000000", borderRadius: "9999px", border: "2px solid rgba(240,192,64,0.45)", boxShadow: "0 4px 16px rgba(0,0,0,0.4)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <Image src="/logo-trns.png" alt="" width={44} height={44} className="object-contain" aria-hidden="true" />
-                  </div>
-                  <p className="text-xs font-medium text-center px-2" style={{ color: "rgba(94,0,129,0.55)", lineHeight: 1.3 }}>{label}<br />coming soon</p>
-                </div>
+                <Image
+                  src={src}
+                  alt={alt}
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                />
               </div>
             ))}
           </div>
-          <p className="mt-8 text-center text-sm" style={{ color: "var(--color-on-surface-muted)" }}>
-            School photography coming soon — check back shortly.
-          </p>
         </div>
       </section>
     </>
