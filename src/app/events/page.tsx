@@ -9,10 +9,14 @@ export const metadata: Metadata = {
 const months = ["January", "February", "March"];
 
 const placeholderEvents = [
-  { date: "Term 1 Start", description: "First day of Term 1 — all learners report at 07:30." },
+  { date: "12 Jan — Term 1 Start", description: "First day of Term 1 — all learners report at 07:30." },
   { date: "Parent Evening", description: "Meet your child's teacher for a progress discussion." },
   { date: "Sports Day", description: "Annual sports day — details and time to be confirmed." },
-  { date: "Term 1 End", description: "Last day of Term 1. End of term assessments completed." },
+  { date: "28 Apr — Term 1 End", description: "Last day of Term 1. End of term assessments completed." },
+  { date: "1 Jun — Term 2 Start", description: "First day of Term 2 — all learners report at 07:30." },
+  { date: "20 Aug — Term 2 End", description: "Last day of Term 2." },
+  { date: "7 Sep — Term 3 Start", description: "First day of Term 3 — all learners report at 07:30." },
+  { date: "4 Dec — Term 3 End", description: "Last day of Term 3. End of year assessments completed." },
 ];
 
 export default function EventsPage() {

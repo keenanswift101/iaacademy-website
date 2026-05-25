@@ -7,10 +7,9 @@ export const metadata: Metadata = {
 };
 
 const terms = [
-  { name: "Term 1", start: "TBC", end: "TBC", weeks: "~10" },
-  { name: "Term 2", start: "TBC", end: "TBC", weeks: "~10" },
-  { name: "Term 3", start: "TBC", end: "TBC", weeks: "~10" },
-  { name: "Term 4", start: "TBC", end: "TBC", weeks: "~9" },
+  { name: "Term 1", start: "12 January", end: "28 April", weeks: "~15" },
+  { name: "Term 2", start: "1 June", end: "20 August", weeks: "~12" },
+  { name: "Term 3", start: "7 September", end: "4 December", weeks: "~13" },
 ];
 
 export default function TermDatesPage() {
@@ -88,7 +87,7 @@ export default function TermDatesPage() {
             </button>
           </div>
           <p className="mt-4 text-xs" style={{ color: "var(--color-on-surface-variant)" }}>
-            Term dates for the upcoming academic year will be confirmed and downloads enabled once published.
+            These dates are for the 2026 academic year. PDF download and calendar sync coming soon.
           </p>
         </div>
       </section>
