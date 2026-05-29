@@ -7,6 +7,7 @@ export const metadata: Metadata = {
 };
 
 const noticePlaceholders = [
+  { date: "16 May 2026", category: "Sport", title: "Charldon wins Men's Senior B Division at Wanderers Closed", body: "Congratulations to Charldon, who claimed the Men's Senior B Division title at the Wanderers Closed squash tournament on the weekend of 16 May 2026. A well-earned victory — we are incredibly proud of you!" },
   { date: "Coming soon", category: "General", title: "Welcome to the IA Academy Notice Board", body: "School announcements and important notices will appear here. Check back regularly for updates from the administration." },
   { date: "—", category: "Academic", title: "Term dates and exam schedules", body: "Term dates, examination timetables, and academic calendar events will be posted here each term." },
   { date: "—", category: "Events", title: "Upcoming school events", body: "Event notices, invitation letters, and activity updates will be shared here for parents and students." },
@@ -16,11 +17,13 @@ const categoryColors: Record<string, string> = {
   General: "var(--color-primary-container)",
   Academic: "var(--color-secondary-container)",
   Events: "var(--color-tertiary-container)",
+  Sport: "rgba(240,192,64,0.20)",
 };
 const categoryTextColors: Record<string, string> = {
   General: "var(--color-on-primary-container)",
   Academic: "var(--color-on-secondary-container)",
   Events: "var(--color-on-tertiary-container)",
+  Sport: "#7a5c00",
 };
 
 export default function NoticeBoardPage() {

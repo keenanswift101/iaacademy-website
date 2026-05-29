@@ -338,8 +338,8 @@ export default function HomePage() {
             </div>
             <ul className="space-y-4">
               {[
-                { date: "Coming soon", title: "School notices will appear here" },
-                { date: "—", title: "Term dates and important announcements" },
+                { date: "16 May 2026", title: "Charldon wins Men's Senior B at Wanderers Closed squash tournament" },
+                { date: "Term 2", title: "Term 2 begins 1 June 2026 — school hours 07:45–13:30" },
               ].map(({ date, title }) => (
                 <li key={title} className="flex gap-4">
                   <span
@@ -356,43 +356,36 @@ export default function HomePage() {
             </ul>
           </div>
 
-          {/* Student Spotlight widget */}
-          <div
-            className="rounded-2xl p-8"
+          {/* Student Spotlight widget — Lorenzo */}
+          <Link
+            href="/spotlight/lorenzo-esterhuizen"
+            className="group rounded-2xl overflow-hidden flex flex-col"
             style={{ background: "var(--color-surface-container-lowest)", boxShadow: "var(--shadow-ambient)", border: "1px solid rgba(94,0,129,0.20)" }}
           >
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-xl font-bold" style={{ color: "var(--color-on-surface)" }}>Student Spotlight</h2>
-              <Link
-                href="/spotlight"
-                className="text-sm font-semibold transition-colors hover:opacity-80"
-                style={{ color: "var(--color-primary)" }}
-              >
-                All spotlights →
-              </Link>
-            </div>
-            <div className="flex flex-col items-center text-center py-6">
-              <div className="mb-4" aria-hidden="true">
-                <Image
-                  src="/favicon.png"
-                  alt="IA Academy"
-                  width={96}
-                  height={96}
-                  style={{ objectFit: "contain" }}
-                />
+            <div className="relative aspect-4/3 w-full overflow-hidden">
+              <Image
+                src="/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.jpeg"
+                alt="Lorenzo Esterhuizen on the podium at the Africa Youth Games"
+                fill
+                className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)" }} aria-hidden="true" />
+              <div className="absolute bottom-4 left-4">
+                <span className="rounded-full px-3 py-1 text-xs font-bold" style={{ background: "rgba(240,192,64,0.92)", color: "#1a1c1e" }}>🏊 Student Spotlight</span>
               </div>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--color-on-surface-variant)" }}>
-                Student spotlight stories will be featured here — celebrating achievements, growth, and the individuals who make our school special.
-              </p>
-              <Link
-                href="/spotlight"
-                className="mt-4 text-sm font-semibold transition-colors hover:opacity-80"
-                style={{ color: "var(--color-primary)" }}
-              >
-                Nominate a student →
-              </Link>
             </div>
-          </div>
+            <div className="p-6 flex-1 flex flex-col">
+              <div className="flex items-center justify-between mb-2">
+                <h2 className="text-xl font-bold" style={{ color: "var(--color-on-surface)" }}>Lorenzo Esterhuizen</h2>
+                <span className="text-sm font-semibold transition-colors group-hover:opacity-80" style={{ color: "var(--color-primary)" }}>Read more →</span>
+              </div>
+              <p className="text-xs font-semibold mb-3 uppercase tracking-wide" style={{ color: "var(--color-primary)" }}>Namibia National Swimming Team</p>
+              <p className="text-sm leading-relaxed" style={{ color: "var(--color-on-surface-variant)" }}>
+                Junior National Champion with 14+ national records. Qualified for the 2026 Youth Olympics in Dakar — dreaming of Los Angeles 2028.
+              </p>
+            </div>
+          </Link>
         </div>
       </section>
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 
@@ -6,6 +7,17 @@ export const metadata: Metadata = {
   title: "Student Spotlight",
   description: "Celebrating the achievements, growth, and stories of IA Academy students.",
 };
+
+const spotlights = [
+  {
+    href: "/spotlight/lorenzo-esterhuizen",
+    name: "Lorenzo Esterhuizen",
+    tag: "Swimming · Namibia National Team",
+    summary: "Namibian Junior National Swimming Champion with 14+ national records, continental medals, and an Olympic dream — Youth Olympics Dakar 2026 and Los Angeles 2028.",
+    image: "/images/sports/swimming/lorenzo-medals-collection.jpeg",
+    badge: "🏆 Olympic Hopeful",
+  },
+];
 
 export default function SpotlightPage() {
   return (
@@ -17,35 +29,27 @@ export default function SpotlightPage() {
         breadcrumb={[{ label: "Student Spotlight", href: "/spotlight" }]}
       />
 
-      {/* Placeholder spotlights */}
       <section className="px-6 py-16" style={{ background: "var(--color-surface)" }}>
-        <div className="mx-auto max-w-4xl">
-          <div className="grid gap-6 sm:grid-cols-2">
-            {[1, 2, 3, 4].map((n) => (
-              <div
-                key={n}
-                className="rounded-2xl p-8"
-                style={{ background: "var(--color-surface-container-lowest)", boxShadow: "var(--shadow-ambient)" }}
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div
-                    className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full text-lg font-bold"
-                    style={{ background: "var(--color-primary-container)", color: "var(--color-on-primary-container)" }}
-                    aria-hidden="true"
-                  >
-                    IA
-                  </div>
-                  <div>
-                    <p className="font-semibold" style={{ color: "var(--color-on-surface)" }}>A IA Academy Learner</p>
-                    <p className="text-xs" style={{ color: "var(--color-primary)" }}>Spotlight coming soon</p>
-                  </div>
-                </div>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--color-on-surface-variant)" }}>
-                  Student spotlight stories will be featured here, celebrating growth, achievements, and the individuals who make our school community special. All stories are shared with full parent consent and do not include surnames.
-                </p>
+        <div className="mx-auto max-w-4xl space-y-6">
+          {spotlights.map(({ href, name, tag, summary, image, badge }) => (
+            <Link
+              key={href}
+              href={href}
+              className="group flex flex-col gap-6 rounded-2xl p-6 transition-shadow hover:shadow-lg sm:flex-row sm:items-center"
+              style={{ background: "var(--color-surface-container-lowest)", boxShadow: "var(--shadow-ambient)", border: "1px solid rgba(94,0,129,0.18)" }}
+            >
+              <div className="relative aspect-square w-full shrink-0 overflow-hidden rounded-xl sm:w-32" style={{ border: "1px solid rgba(94,0,129,0.12)" }}>
+                <Image src={image} alt={name} fill className="object-cover object-center" sizes="128px" />
               </div>
-            ))}
-          </div>
+              <div className="flex-1">
+                <p className="mb-1 text-xs font-semibold uppercase tracking-widest" style={{ color: "var(--color-primary)" }}>{tag}</p>
+                <h2 className="mb-1 text-xl font-bold" style={{ color: "var(--color-on-surface)" }}>{name}</h2>
+                <p className="mb-3 text-xs font-medium" style={{ color: "var(--color-gold, #f0c040)" }}>{badge}</p>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--color-on-surface-variant)" }}>{summary}</p>
+                <p className="mt-3 text-sm font-semibold transition-colors group-hover:opacity-80" style={{ color: "var(--color-primary)" }}>Read profile →</p>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 

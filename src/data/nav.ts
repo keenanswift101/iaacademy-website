@@ -66,6 +66,7 @@ export const navItems: NavItem[] = [
       { label: "Parent Resources", href: "/resources/parents", description: "ADHD, Dyslexia & ADD tips" },
       { label: "Notice Board", href: "/notice-board", description: "School announcements" },
       { label: "Events Calendar", href: "/events", description: "Upcoming dates & activities" },
+      { label: "Student Spotlight", href: "/spotlight", description: "Celebrating our learners" },
     ],
   },
   {
