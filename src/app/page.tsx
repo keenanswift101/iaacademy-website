@@ -66,8 +66,8 @@ export default function HomePage() {
       {/* ── 2. WHY IA ACADEMY — 3 PILLARS ────────────────── */}
       <section
         aria-labelledby="pillars-heading"
-        className="px-6 pb-20"
-        style={{ background: "var(--color-surface)", marginTop: "-118px", paddingTop: "calc(118px + 5rem)" }}
+        className="px-6 py-20"
+        style={{ background: "var(--color-surface)", marginTop: "-2px" }}
       >
         <div className="mx-auto max-w-5xl">
           <div className="mb-12 text-center">
