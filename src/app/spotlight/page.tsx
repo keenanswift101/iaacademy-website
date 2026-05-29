@@ -14,8 +14,8 @@ const spotlights = [
     name: "Lorenzo Esterhuizen",
     tag: "Swimming · Namibia National Team",
     summary: "Namibian Junior National Swimming Champion with 14+ national records, continental medals, and an Olympic dream — Youth Olympics Dakar 2026 and Los Angeles 2028.",
-    image: "/images/sports/swimming/lorenzo-medals-collection.jpeg",
-    badge: "🏆 Olympic Hopeful",
+    image: "/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.jpeg",
+    badge: "Olympic Hopeful — Youth Olympics Dakar 2026",
   },
 ];
 
@@ -38,8 +38,8 @@ export default function SpotlightPage() {
               className="group flex flex-col overflow-hidden rounded-2xl transition-shadow hover:shadow-lg sm:flex-row"
               style={{ background: "var(--color-surface-container-lowest)", boxShadow: "var(--shadow-ambient)", border: "1px solid rgba(94,0,129,0.18)" }}
             >
-              <div className="relative aspect-4/3 w-full shrink-0 overflow-hidden sm:aspect-auto sm:w-64 sm:h-auto">
-                <Image src={image} alt={name} fill className="object-cover object-top transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 256px" />
+              <div className="relative aspect-4/3 w-full shrink-0 overflow-hidden sm:aspect-auto sm:w-96 sm:h-auto" style={{ minHeight: "320px" }}>
+                <Image src={image} alt={name} fill className="object-cover object-top transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 384px" />
               </div>
               <div className="flex-1 p-6 sm:p-8">
                 <p className="mb-1 text-xs font-semibold uppercase tracking-widest" style={{ color: "var(--color-primary)" }}>{tag}</p>
