@@ -47,7 +47,7 @@ export default function LorenzoSpotlightPage() {
             <div className="w-full lg:w-5/12 flex-shrink-0">
               <div className="overflow-hidden rounded-2xl" style={{ boxShadow: "var(--shadow-ambient)", border: "1px solid rgba(94,0,129,0.15)" }}>
                 <Image
-                  src="/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.jpeg"
+                  src="/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.png"
                   alt="Lorenzo Esterhuizen on the podium at the African Youth Games in Angola"
                   width={600}
                   height={750}
@@ -105,8 +105,8 @@ export default function LorenzoSpotlightPage() {
         <div className="mx-auto max-w-5xl">
           <div className="grid grid-cols-3 gap-4">
             {[
-              { src: "/images/sports/swimming/lorenzo-africa-junior-championships-medal.jpeg", alt: "Lorenzo at the Africa Junior Championships, holding medal and mascot", pos: "object-top" },
-              { src: "/images/sports/swimming/lorenzo-medals-collection.jpeg", alt: "Lorenzo smiling next to his full medal collection", pos: "object-center" },
+              { src: "/images/sports/swimming/lorenzo-africa-junior-championships-medal.png", alt: "Lorenzo at the Africa Junior Championships, holding medal and mascot", pos: "object-top" },
+              { src: "/images/sports/swimming/lorenzo-medals-collection.png", alt: "Lorenzo smiling next to his full medal collection", pos: "object-center" },
               { src: "/images/sports/swimming/lorenzo-namibia-team-africa-championships-algeria.jpeg", alt: "Namibia Aquatics team heading to the 17th Africa Championships in Algeria", pos: "object-top" },
             ].map(({ src, alt, pos }) => (
               <div key={src} className="relative aspect-4/3 overflow-hidden rounded-2xl" style={{ boxShadow: "var(--shadow-ambient)", border: "1px solid rgba(94,0,129,0.15)" }}>

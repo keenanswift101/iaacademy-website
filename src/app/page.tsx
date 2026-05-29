@@ -364,7 +364,7 @@ export default function HomePage() {
           >
             <div className="relative aspect-4/3 w-full overflow-hidden">
               <Image
-                src="/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.jpeg"
+                src="/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.png"
                 alt="Lorenzo Esterhuizen on the podium at the Africa Youth Games"
                 fill
                 className="object-cover object-center transition-transform duration-500 group-hover:scale-105"

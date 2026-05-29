@@ -18,9 +18,9 @@ const allImages: { src: string; alt: string; category: Exclude<Category, "All"> 
   { src: "/images/school-life-10.jpeg", alt: "School environment", category: "School Life" },
   { src: "/images/school-life-11.jpeg", alt: "Pupils at IA Academy", category: "School Life" },
   { src: "/images/school-life-12.jpeg", alt: "Life at IA Academy", category: "School Life" },
-  { src: "/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.jpeg", alt: "Lorenzo Esterhuizen on the podium at the Africa Youth Games in Angola", category: "Swimming" },
-  { src: "/images/sports/swimming/lorenzo-africa-junior-championships-medal.jpeg", alt: "Lorenzo at the Africa Junior Championships holding medal", category: "Swimming" },
-  { src: "/images/sports/swimming/lorenzo-medals-collection.jpeg", alt: "Lorenzo with his full medal collection", category: "Swimming" },
+  { src: "/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.png", alt: "Lorenzo Esterhuizen on the podium at the Africa Youth Games in Angola", category: "Swimming" },
+  { src: "/images/sports/swimming/lorenzo-africa-junior-championships-medal.png", alt: "Lorenzo at the Africa Junior Championships holding medal", category: "Swimming" },
+  { src: "/images/sports/swimming/lorenzo-medals-collection.png", alt: "Lorenzo with his full medal collection", category: "Swimming" },
   { src: "/images/sports/swimming/lorenzo-namibia-team-africa-championships-algeria.jpeg", alt: "Namibia Aquatics team at the 17th Africa Championships in Algeria", category: "Swimming" },
   { src: "/images/sports/squash/charldon-wanderers-closed-b-senior-trophy.jpeg", alt: "Charldon winning the Men's Senior B Division at the Wanderers Closed squash tournament", category: "Squash" },
 ];

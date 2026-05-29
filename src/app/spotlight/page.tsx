@@ -14,7 +14,7 @@ const spotlights = [
     name: "Lorenzo Esterhuizen",
     tag: "Swimming · Namibia National Team",
     summary: "Namibian Junior National Swimming Champion with 14+ national records, continental medals, and an Olympic dream — Youth Olympics Dakar 2026 and Los Angeles 2028.",
-    image: "/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.jpeg",
+    image: "/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.png",
     badge: "Olympic Hopeful — Youth Olympics Dakar 2026",
   },
 ];
