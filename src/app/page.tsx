@@ -75,8 +75,8 @@ export default function HomePage() {
               <Image
                 src="/logo-trns.png"
                 alt=""
-                width={72}
-                height={72}
+                width={120}
+                height={120}
                 className="object-contain"
                 aria-hidden="true"
               />
