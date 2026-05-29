@@ -3,7 +3,6 @@ import { Lexend } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import AccessibilityModeSelector from "@/components/accessibility/AccessibilityModeSelector";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import PageReveal from "@/components/ui/PageReveal";
 import PageRails from "@/components/ui/PageRails";
@@ -91,7 +90,6 @@ export default function RootLayout({
         <Footer />
         <ScrollToTop />
         <PageReveal />
-        <AccessibilityModeSelector />
         <CookieConsent />
       </body>
     </html>

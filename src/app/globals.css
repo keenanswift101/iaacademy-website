@@ -534,6 +534,30 @@ blockquote {
   box-shadow: 0 20px 48px rgba(94,0,129,0.14);
 }
 
+/* ─── Page rail ribbon animations ──────────── */
+@keyframes ribbon-flow {
+  0%   { stroke-dashoffset: 3200; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes rail-sway {
+  0%   { transform: translateX(0px)  skewY(0deg); }
+  20%  { transform: translateX(3px)  skewY(0.25deg); }
+  45%  { transform: translateX(-2px) skewY(-0.18deg); }
+  70%  { transform: translateX(4px)  skewY(0.22deg); }
+  100% { transform: translateX(0px)  skewY(0deg); }
+}
+
+/* Each path flows at its own pace */
+.rp1 { stroke-dasharray: 3200; animation: ribbon-flow 14s linear infinite; }
+.rp2 { stroke-dasharray: 3000; animation: ribbon-flow 10s linear infinite; animation-delay: -3s; }
+.rp3 { stroke-dasharray: 2800; animation: ribbon-flow 12s linear infinite; animation-delay: -6s; }
+.rp4 { stroke-dasharray: 1800; animation: ribbon-flow 9s  linear infinite; animation-delay: -1.5s; }
+.rp5 { stroke-dasharray: 1400; animation: ribbon-flow 8s  linear infinite; animation-delay: -4s; }
+
+/* SVG container sway */
+.rail-sway { animation: rail-sway 9s ease-in-out infinite; }
+.rail-sway-r { animation: rail-sway 11s ease-in-out infinite; animation-delay: -3.5s; }
+
 /* ─── Calming pulse animation ──────────────── */
 /* Slow, gentle breathe effect for image placeholder cards.
    Respects prefers-reduced-motion (disabled above via global rule). */
