@@ -18,7 +18,7 @@ export default function HighSchoolCurriculumPage() {
         <div className="mx-auto max-w-3xl">
           <div className="rounded-2xl p-10 text-center" style={{ background: "var(--color-surface-container-lowest)", boxShadow: "var(--shadow-ambient)" }}>
             <p className="text-lg font-medium mb-2" style={{ color: "var(--color-primary)" }}>Curriculum details coming soon</p>
-            <p className="text-sm" style={{ color: "var(--color-on-surface-variant)" }}>Grade 8–12 curriculum pathways, Cambridge frameworks, and subject overviews will appear here.</p>
+            <p className="text-sm" style={{ color: "var(--color-on-surface-variant)" }}>Grade 8–11 curriculum pathways, Cambridge frameworks, and subject overviews will appear here.</p>
           </div>
         </div>
       </section>
