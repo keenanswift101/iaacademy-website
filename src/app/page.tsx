@@ -43,7 +43,7 @@ const pillars = [
       </svg>
     ),
     title: "Namibian Curriculum",
-    copy: "Grade R to Grade 12. A recognised, structured curriculum delivered in the calm, supportive environment your child deserves.",
+    copy: "Grade R to Grade 11 via the Namibian curriculum. Grade 12 completed through supervised online programmes. Delivered in a calm, supportive environment.",
   },
 ];
 
@@ -340,7 +340,7 @@ export default function HomePage() {
             <ul className="space-y-4">
               {[
                 { date: "16 May 2026", title: "Charldon wins Men's Senior B at Wanderers Closed squash tournament" },
-                { date: "Term 2", title: "Term 2 begins 1 June 2026 — school hours 07:45–13:30" },
+                { date: "Term 2", title: "Term 2 begins 1 June 2026 — school hours 07:15–13:30" },
               ].map(({ date, title }) => (
                 <li key={title} className="flex gap-4">
                   <span

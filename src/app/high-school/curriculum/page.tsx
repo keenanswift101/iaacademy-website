@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
-  title: "High School Curriculum — Grade 8 to 12",
+  title: "High School Curriculum — Grade 8 to 11",
 };
 
 export default function HighSchoolCurriculumPage() {
@@ -10,7 +10,7 @@ export default function HighSchoolCurriculumPage() {
     <>
       <PageHero
         label="High School Phase"
-        title="Namibian Curriculum — Grade 8 to 12"
+        title="Namibian Curriculum — Grade 8 to 11"
         description="From Cambridge Lower Secondary through to IGCSE and AS Level — a pathway to internationally recognised qualifications."
         breadcrumb={[{ label: "High School", href: "/high-school" }, { label: "Curriculum", href: "/high-school/curriculum" }]}
       />

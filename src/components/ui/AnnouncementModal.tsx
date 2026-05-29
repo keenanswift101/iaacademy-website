@@ -53,7 +53,7 @@ const announcements: Announcement[] = [
     type: "info",
     badge: "Important Notice",
     title: "Term 2 Begins 1 June 2026",
-    body: "A reminder that Term 2 opens on Monday, 1 June 2026. School hours remain 07:45 – 13:30. Please ensure all stationery requirements are ready.",
+    body: "A reminder that Term 2 opens on Monday, 1 June 2026. School hours remain 07:15 – 13:30. Please ensure all stationery requirements are ready.",
     cta: { label: "View Term Dates", href: "/admissions/term-dates" },
   },
 ];

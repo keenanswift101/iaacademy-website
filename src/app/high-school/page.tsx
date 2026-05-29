@@ -4,7 +4,7 @@ import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
   title: "High School — Grade 8 to Grade 12",
-  description: "Innovative Academics Academy's High School phase covers Grade 8 to 12, including the Namibian curriculum, partial online blended learning in Grades 8–9, and full online pathways for Grade 12 via TAPE, Mobimax and Cambridge.",
+  description: "Innovative Academics Academy's High School phase covers Grade 8 to 12, including the Namibian curriculum to Grade 11, partial online blended learning in Grades 8–9, and full online pathways for Grade 12 via TAPE, Mobimax and Cambridge.",
 };
 
 export default function HighSchoolPage() {

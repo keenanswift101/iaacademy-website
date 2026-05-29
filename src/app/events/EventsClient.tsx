@@ -14,11 +14,11 @@ const YEAR = 2026;
 
 const events: CalendarEvent[] = [
   // Term dates
-  { month: 0,  day: 12, title: "Term 1 Start",     description: "First day of Term 1 — all learners report at 07:30.", color: "primary" },
+  { month: 0,  day: 12, title: "Term 1 Start",     description: "First day of Term 1 — all learners report at 07:15.", color: "primary" },
   { month: 3,  day: 28, title: "Term 1 End",       description: "Last day of Term 1. End of term assessments completed.", color: "gold" },
-  { month: 5,  day: 1,  title: "Term 2 Start",     description: "First day of Term 2 — all learners report at 07:30.", color: "primary" },
+  { month: 5,  day: 1,  title: "Term 2 Start",     description: "First day of Term 2 — all learners report at 07:15.", color: "primary" },
   { month: 7,  day: 20, title: "Term 2 End",       description: "Last day of Term 2.", color: "gold" },
-  { month: 8,  day: 7,  title: "Term 3 Start",     description: "First day of Term 3 — all learners report at 07:30.", color: "primary" },
+  { month: 8,  day: 7,  title: "Term 3 Start",     description: "First day of Term 3 — all learners report at 07:15.", color: "primary" },
   { month: 11, day: 4,  title: "Term 3 End",       description: "Last day of Term 3. End of year assessments completed.", color: "gold" },
   // Namibian Public Holidays 2026
   { month: 0,  day: 1,  title: "New Year's Day",   description: "Public holiday — school closed.", color: "holiday" },

@@ -40,6 +40,7 @@ export const navItems: NavItem[] = [
     href: "/high-school",
     children: [
       { label: "Overview", href: "/high-school", description: "Grade 8 – 12 (ages ~14–18)" },
+
       { label: "Namibian Curriculum", href: "/high-school/curriculum" },
       { label: "Subject Choices", href: "/high-school/subjects" },
       { label: "Learning Support", href: "/high-school/learning-support" },

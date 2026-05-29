@@ -14,7 +14,7 @@ const faqCategories = [
     questions: [
       {
         q: "What grades do you offer?",
-        a: "IA Academy offers Grade R through to Grade 12. Our phases are: Primary (Grade R–3), Junior Primary (Grade 4–7), and High School (Grade 8–12).",
+        a: "IA Academy offers Grade R through to Grade 12. Our phases are: Primary (Grade R–3), Junior Primary (Grade 4–7), and High School (Grade 8–12). The Namibian curriculum is offered from Grade R to Grade 11. Grade 12 learners complete their final year via recognised online programmes.",
       },
       {
         q: "How many students are in each class?",
@@ -22,7 +22,7 @@ const faqCategories = [
       },
       {
         q: "Do you follow the Namibian curriculum?",
-        a: "Yes. IA Academy follows the Namibian Curriculum from Grade R to Grade 12, including Cambridge IGCSE and AS Level offerings at the High School phase.",
+        a: "Yes. IA Academy follows the Namibian Curriculum from Grade R to Grade 11. Grade 12 learners complete their final year through recognised online programmes (TAPE, Mobimax, Cambridge) — supervised on campus.",
       },
       {
         q: "Is IA Academy registered and accredited?",
