@@ -257,21 +257,21 @@ export default function HeroCarousel() {
         style={{ zIndex: 20 }}
       >
         <svg
-          viewBox="0 0 1440 120"
+          viewBox="0 0 1440 56"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
-          className="w-full h-[120px]"
+          className="w-full h-14"
           style={{ display: "block" }}
         >
           <defs>
             <linearGradient id="wave-fade" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#f9f9fc" stopOpacity="0.6" />
+              <stop offset="0%" stopColor="#f9f9fc" stopOpacity="0.5" />
               <stop offset="100%" stopColor="#f9f9fc" stopOpacity="1" />
             </linearGradient>
           </defs>
           <path
-            d="M0 120 C360 0 1080 0 1440 120 L1440 120 L0 120Z"
+            d="M0 56 C360 28 1080 28 1440 56 L1440 56 L0 56Z"
             fill="url(#wave-fade)"
           />
         </svg>
