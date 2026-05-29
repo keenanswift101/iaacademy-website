@@ -47,23 +47,23 @@ export default function PageRails() {
           </linearGradient>
         </defs>
 
-        <path className="rp1"
+        <path className="rp1" pathLength="1000"
           d="M 50 20 C 10 110, 75 220, 28 355 C  2 465, 72 568, 22 700 C  2 802, 70 890, 44 980"
           fill="none" stroke="url(#pg-l1)" strokeWidth="3.0" strokeLinecap="round"
         />
-        <path className="rp2"
+        <path className="rp2" pathLength="1000"
           d="M 60 20 C 18 135, 68 248, 46 380 C 16 495, 68 594, 36 722 C 12 822, 66 908, 52 980"
           fill="none" stroke="url(#pg-l2)" strokeWidth="2.0" strokeLinecap="round"
         />
-        <path className="rp3"
+        <path className="rp3" pathLength="1000"
           d="M 24 60 C 72 168,  8 285, 68 422 C 78 515, 16 622, 70 752 C 78 845, 20 930, 62 990"
           fill="none" stroke="url(#pg-l3)" strokeWidth="2.4" strokeLinecap="round"
         />
-        <path className="rp4"
+        <path className="rp4" pathLength="1000"
           d="M 66 150 C 28 245, 74 345, 30 468 C 10 562, 72 652, 26 768"
           fill="none" stroke="url(#pg-l4)" strokeWidth="1.5" strokeLinecap="round"
         />
-        <path className="rp5"
+        <path className="rp5" pathLength="1000"
           d="M 14 580 C 62 655,  8 736, 58 816 C 76 876, 18 935, 60 990"
           fill="none" stroke="url(#pg-l3)" strokeWidth="1.8" strokeLinecap="round"
         />
@@ -110,23 +110,23 @@ export default function PageRails() {
           </linearGradient>
         </defs>
 
-        <path className="rp1"
+        <path className="rp1" pathLength="1000"
           d="M 30 20 C 70 110,  5 225, 52 355 C 78 468,  8 572, 58 700 C 78 802, 10 888, 36 980"
           fill="none" stroke="url(#pg-r1)" strokeWidth="3.0" strokeLinecap="round"
         />
-        <path className="rp2"
+        <path className="rp2" pathLength="1000"
           d="M 20 20 C 62 138, 12 252, 34 382 C 64 498, 12 590, 44 714 C 68 818, 14 900, 28 980"
           fill="none" stroke="url(#pg-r2)" strokeWidth="2.0" strokeLinecap="round"
         />
-        <path className="rp3"
+        <path className="rp3" pathLength="1000"
           d="M 56 60 C  8 158, 72 278, 12 412 C  2 508, 64 612, 10 744 C  2 838, 60 924, 18 990"
           fill="none" stroke="url(#pg-r3)" strokeWidth="2.4" strokeLinecap="round"
         />
-        <path className="rp4"
+        <path className="rp4" pathLength="1000"
           d="M 14 150 C 52 248,  6 348, 50 468 C 70 562,  8 655, 54 768"
           fill="none" stroke="url(#pg-r4)" strokeWidth="1.5" strokeLinecap="round"
         />
-        <path className="rp5"
+        <path className="rp5" pathLength="1000"
           d="M 66 580 C 18 655, 72 732, 22 814 C  4 876, 62 934, 20 990"
           fill="none" stroke="url(#pg-r3)" strokeWidth="1.8" strokeLinecap="round"
         />

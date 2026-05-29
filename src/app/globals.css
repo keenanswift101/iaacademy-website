@@ -535,28 +535,41 @@ blockquote {
 }
 
 /* ─── Page rail ribbon animations ──────────── */
-@keyframes ribbon-flow {
-  0%   { stroke-dashoffset: 3200; }
-  100% { stroke-dashoffset: 0; }
-}
-@keyframes rail-sway {
-  0%   { transform: translateX(0px)  skewY(0deg); }
-  20%  { transform: translateX(3px)  skewY(0.25deg); }
-  45%  { transform: translateX(-2px) skewY(-0.18deg); }
-  70%  { transform: translateX(4px)  skewY(0.22deg); }
-  100% { transform: translateX(0px)  skewY(0deg); }
-}
+/* Wrapped in no-preference so the global reduced-motion !important override
+   cannot disable these decorative animations. */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes ribbon-comet {
+    /* pathLength="1000" on each path — dasharray 280/720 = comet + gap.
+       Offset goes 1000 → 0 so comet travels top → bottom continuously. */
+    from { stroke-dashoffset: 1000; }
+    to   { stroke-dashoffset: 0; }
+  }
+  @keyframes rail-sway-l {
+    0%   { transform: translateX(0px); }
+    20%  { transform: translateX(12px); }
+    45%  { transform: translateX(-8px); }
+    70%  { transform: translateX(14px); }
+    100% { transform: translateX(0px); }
+  }
+  @keyframes rail-sway-r {
+    0%   { transform: translateX(0px); }
+    20%  { transform: translateX(-12px); }
+    45%  { transform: translateX(9px); }
+    70%  { transform: translateX(-14px); }
+    100% { transform: translateX(0px); }
+  }
 
-/* Each path flows at its own pace */
-.rp1 { stroke-dasharray: 3200; animation: ribbon-flow 14s linear infinite; }
-.rp2 { stroke-dasharray: 3000; animation: ribbon-flow 10s linear infinite; animation-delay: -3s; }
-.rp3 { stroke-dasharray: 2800; animation: ribbon-flow 12s linear infinite; animation-delay: -6s; }
-.rp4 { stroke-dasharray: 1800; animation: ribbon-flow 9s  linear infinite; animation-delay: -1.5s; }
-.rp5 { stroke-dasharray: 1400; animation: ribbon-flow 8s  linear infinite; animation-delay: -4s; }
+  /* Traveling comet per path — different speeds & offsets for ripple effect */
+  .rp1 { stroke-dasharray: 280 720; animation: ribbon-comet 8s  linear infinite; }
+  .rp2 { stroke-dasharray: 260 740; animation: ribbon-comet 11s linear infinite; animation-delay: -2.5s; }
+  .rp3 { stroke-dasharray: 240 760; animation: ribbon-comet 9s  linear infinite; animation-delay: -5s; }
+  .rp4 { stroke-dasharray: 200 800; animation: ribbon-comet 7s  linear infinite; animation-delay: -1s; }
+  .rp5 { stroke-dasharray: 180 820; animation: ribbon-comet 10s linear infinite; animation-delay: -4s; }
 
-/* SVG container sway */
-.rail-sway { animation: rail-sway 9s ease-in-out infinite; }
-.rail-sway-r { animation: rail-sway 11s ease-in-out infinite; animation-delay: -3.5s; }
+  /* SVG container lateral sway */
+  .rail-sway   { animation: rail-sway-l 9s  ease-in-out infinite; transform-box: fill-box; }
+  .rail-sway-r { animation: rail-sway-r 11s ease-in-out infinite; transform-box: fill-box; }
+}
 
 /* ─── Calming pulse animation ──────────────── */
 /* Slow, gentle breathe effect for image placeholder cards.
