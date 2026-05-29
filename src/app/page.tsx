@@ -66,17 +66,18 @@ export default function HomePage() {
       {/* ── 2. WHY IA ACADEMY — 3 PILLARS ────────────────── */}
       <section
         aria-labelledby="pillars-heading"
-        className="px-6 py-20"
+        className="px-6 pb-20"
+        style={{ background: "var(--color-surface)", marginTop: "-118px", paddingTop: "calc(118px + 5rem)" }}
       >
         <div className="mx-auto max-w-5xl">
           <div className="mb-12 text-center">
             <div className="mx-auto mb-5 flex items-center justify-center">
               <Image
-                src="/favicon.png"
+                src="/logo-trns.png"
                 alt=""
-                width={80}
-                height={80}
-                className="object-contain w-20 h-20 sm:w-14 sm:h-14"
+                width={72}
+                height={72}
+                className="object-contain"
                 aria-hidden="true"
               />
             </div>
