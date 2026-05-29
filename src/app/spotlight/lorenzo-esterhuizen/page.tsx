@@ -105,12 +105,12 @@ export default function LorenzoSpotlightPage() {
         <div className="mx-auto max-w-5xl">
           <div className="grid grid-cols-3 gap-4">
             {[
-              { src: "/images/sports/swimming/lorenzo-africa-junior-championships-medal.jpeg", alt: "Lorenzo at the Africa Junior Championships, holding medal and mascot" },
-              { src: "/images/sports/swimming/lorenzo-medals-collection.jpeg", alt: "Lorenzo smiling next to his full medal collection" },
-              { src: "/images/sports/swimming/lorenzo-namibia-team-africa-championships-algeria.jpeg", alt: "Namibia Aquatics team heading to the 17th Africa Championships in Algeria" },
-            ].map(({ src, alt }) => (
+              { src: "/images/sports/swimming/lorenzo-africa-junior-championships-medal.jpeg", alt: "Lorenzo at the Africa Junior Championships, holding medal and mascot", pos: "object-top" },
+              { src: "/images/sports/swimming/lorenzo-medals-collection.jpeg", alt: "Lorenzo smiling next to his full medal collection", pos: "object-center" },
+              { src: "/images/sports/swimming/lorenzo-namibia-team-africa-championships-algeria.jpeg", alt: "Namibia Aquatics team heading to the 17th Africa Championships in Algeria", pos: "object-top" },
+            ].map(({ src, alt, pos }) => (
               <div key={src} className="relative aspect-4/3 overflow-hidden rounded-2xl" style={{ boxShadow: "var(--shadow-ambient)", border: "1px solid rgba(94,0,129,0.15)" }}>
-                <Image src={src} alt={alt} fill className="object-cover object-center" sizes="(max-width: 768px) 33vw, 25vw" />
+                <Image src={src} alt={alt} fill className={`object-cover ${pos}`} sizes="(max-width: 768px) 33vw, 25vw" />
               </div>
             ))}
           </div>

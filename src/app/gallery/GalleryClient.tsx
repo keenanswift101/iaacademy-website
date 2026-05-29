@@ -27,12 +27,6 @@ const allImages: { src: string; alt: string; category: Exclude<Category, "All"> 
 
 const categories: Category[] = ["All", "School Life", "Swimming", "Squash"];
 
-const categoryIcons: Record<Category, string> = {
-  All: "🖼️",
-  "School Life": "🏫",
-  Swimming: "🏊",
-  Squash: "🏆",
-};
 
 export default function GalleryClient() {
   const [active, setActive] = useState<Category>("All");
@@ -54,18 +48,17 @@ export default function GalleryClient() {
                 onClick={() => setActive(cat)}
                 className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all hover:scale-105 focus-visible:ring-2"
                 style={{
-                  background: isActive ? "var(--color-primary)" : "var(--color-surface-container)",
-                  color: isActive ? "var(--color-on-primary)" : "var(--color-on-surface-variant)",
-                  border: isActive ? "none" : "1px solid rgba(94,0,129,0.18)",
+                  background: isActive ? "var(--color-primary)" : "transparent",
+                  color: isActive ? "var(--color-on-primary)" : "var(--color-primary)",
+                  border: "1.5px solid var(--color-primary)",
                   boxShadow: isActive ? "0 4px 16px rgba(94,0,129,0.25)" : "none",
                 }}
               >
-                <span>{categoryIcons[cat]}</span>
                 {cat}
                 <span
                   className="rounded-full px-2 py-0.5 text-xs font-bold"
                   style={{
-                    background: isActive ? "rgba(255,255,255,0.25)" : "rgba(94,0,129,0.10)",
+                    background: isActive ? "rgba(255,255,255,0.25)" : "rgba(94,0,129,0.12)",
                     color: isActive ? "var(--color-on-primary)" : "var(--color-primary)",
                   }}
                 >

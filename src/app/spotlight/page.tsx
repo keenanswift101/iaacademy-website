@@ -35,18 +35,18 @@ export default function SpotlightPage() {
             <Link
               key={href}
               href={href}
-              className="group flex flex-col gap-6 rounded-2xl p-6 transition-shadow hover:shadow-lg sm:flex-row sm:items-center"
+              className="group flex flex-col overflow-hidden rounded-2xl transition-shadow hover:shadow-lg sm:flex-row"
               style={{ background: "var(--color-surface-container-lowest)", boxShadow: "var(--shadow-ambient)", border: "1px solid rgba(94,0,129,0.18)" }}
             >
-              <div className="relative aspect-square w-full shrink-0 overflow-hidden rounded-xl sm:w-32" style={{ border: "1px solid rgba(94,0,129,0.12)" }}>
-                <Image src={image} alt={name} fill className="object-cover object-center" sizes="128px" />
+              <div className="relative aspect-4/3 w-full shrink-0 overflow-hidden sm:aspect-auto sm:w-64 sm:h-auto">
+                <Image src={image} alt={name} fill className="object-cover object-top transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 256px" />
               </div>
-              <div className="flex-1">
+              <div className="flex-1 p-6 sm:p-8">
                 <p className="mb-1 text-xs font-semibold uppercase tracking-widest" style={{ color: "var(--color-primary)" }}>{tag}</p>
-                <h2 className="mb-1 text-xl font-bold" style={{ color: "var(--color-on-surface)" }}>{name}</h2>
-                <p className="mb-3 text-xs font-medium" style={{ color: "var(--color-gold, #f0c040)" }}>{badge}</p>
+                <h2 className="mb-1 text-2xl font-bold" style={{ color: "var(--color-on-surface)" }}>{name}</h2>
+                <p className="mb-4 text-sm font-medium" style={{ color: "#b8860b" }}>{badge}</p>
                 <p className="text-sm leading-relaxed" style={{ color: "var(--color-on-surface-variant)" }}>{summary}</p>
-                <p className="mt-3 text-sm font-semibold transition-colors group-hover:opacity-80" style={{ color: "var(--color-primary)" }}>Read profile →</p>
+                <p className="mt-4 text-sm font-semibold transition-colors group-hover:opacity-80" style={{ color: "var(--color-primary)" }}>Read profile →</p>
               </div>
             </Link>
           ))}
