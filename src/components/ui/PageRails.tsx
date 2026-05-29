@@ -12,17 +12,15 @@ export default function PageRails() {
         className="w-4.5 sm:w-6.5 md:w-9.5 lg:w-14.5 xl:w-[clamp(70px,8vw,120px)]"
         style={{ position: "absolute", left: 6, top: 0, height: "100%", overflow: "visible" }}
       >
-        {/* Slow pendulum rotation around top-centre — SMIL bypasses CSS overrides */}
+        {/* Continuous spin around centre — SMIL bypasses CSS overrides */}
         <animateTransform
           attributeName="transform"
           attributeType="XML"
           type="rotate"
-          values="0 40 0; 4 40 0; 0 40 0; -4 40 0; 0 40 0"
-          keyTimes="0; 0.25; 0.5; 0.75; 1"
-          dur="12s"
+          from="0 40 500"
+          to="360 40 500"
+          dur="20s"
           repeatCount="indefinite"
-          calcMode="spline"
-          keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"
         />
 
         <defs>
@@ -89,18 +87,15 @@ export default function PageRails() {
         className="block w-4.5 sm:w-6.5 md:w-9.5 lg:w-14.5 xl:w-[clamp(70px,8vw,120px)]"
         style={{ position: "absolute", right: 6, top: 0, height: "100%", overflow: "visible" }}
       >
-        {/* Opposite phase — creates counter-swirl feel */}
+        {/* Counter-spin, slightly different speed */}
         <animateTransform
           attributeName="transform"
           attributeType="XML"
           type="rotate"
-          values="0 40 0; -4 40 0; 0 40 0; 4 40 0; 0 40 0"
-          keyTimes="0; 0.25; 0.5; 0.75; 1"
-          dur="14s"
-          begin="-5s"
+          from="0 40 500"
+          to="-360 40 500"
+          dur="25s"
           repeatCount="indefinite"
-          calcMode="spline"
-          keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"
         />
 
         <defs>
