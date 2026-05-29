@@ -367,7 +367,8 @@ export default function HomePage() {
                 src="/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.png"
                 alt="Lorenzo Esterhuizen on the podium at the Africa Youth Games"
                 fill
-                className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                style={{ objectPosition: "50% 18%" }}
                 sizes="(max-width: 640px) 100vw, 50vw"
               />
               <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)" }} aria-hidden="true" />
