@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AccessibilityModeSelector from "@/components/accessibility/AccessibilityModeSelector";
 import ScrollToTop from "@/components/ui/ScrollToTop";
+import PageReveal from "@/components/ui/PageReveal";
 import PageRails from "@/components/ui/PageRails";
 import CookieConsent from "@/components/ui/CookieConsent";
 
@@ -89,6 +90,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <ScrollToTop />
+        <PageReveal />
         <AccessibilityModeSelector />
         <CookieConsent />
       </body>

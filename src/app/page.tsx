@@ -70,7 +70,7 @@ export default function HomePage() {
         style={{ background: "var(--color-surface)", marginTop: "-2px" }}
       >
         <div className="mx-auto max-w-5xl">
-          <div className="mb-12 text-center">
+          <div className="mb-12 text-center reveal">
             <div className="mx-auto mb-5 flex items-center justify-center">
               <Image
                 src="/logo-trns.png"
@@ -90,10 +90,10 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-6 sm:grid-cols-3">
-            {pillars.map(({ icon, title, copy }) => (
+            {pillars.map(({ icon, title, copy }, i) => (
               <div
                 key={title}
-                className="rounded-2xl p-8 transition-shadow"
+                className={`rounded-2xl p-8 card-lift reveal reveal-delay-${i + 1}`}
                 style={{
                   background: "linear-gradient(135deg, rgba(94,0,129,0.10) 0%, rgba(240,192,64,0.07) 100%)",
                   backdropFilter: "blur(12px)",
@@ -125,7 +125,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-5xl">
           <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-16">
             {/* Photo */}
-            <div className="w-full overflow-hidden rounded-2xl lg:w-5/12" style={{ boxShadow: "var(--shadow-ambient)" }}>
+            <div className="w-full overflow-hidden rounded-2xl lg:w-5/12 reveal-left" style={{ boxShadow: "var(--shadow-ambient)" }}>
               <Image
                 src="/images/school-life-01.jpeg"
                 alt="Pupils at IA Academy"
@@ -138,7 +138,7 @@ export default function HomePage() {
             </div>
 
             {/* Text */}
-            <div className="flex-1">
+            <div className="flex-1 reveal-right">
               <p className="mb-3 text-sm font-semibold tracking-[0.16em] uppercase" style={{ color: "var(--color-primary)" }}>
                 Our Approach
               </p>
@@ -174,7 +174,7 @@ export default function HomePage() {
         aria-labelledby="online-heading"
         className="px-6 py-16"
       >
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto max-w-4xl text-center reveal">
           <div
             className="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-full mb-6"
             style={{ background: "var(--color-gold)" }}
@@ -210,7 +210,7 @@ export default function HomePage() {
         className="px-6 py-20"
       >
         <div className="mx-auto max-w-4xl">
-          <div className="mb-10 text-center">
+          <div className="mb-10 text-center reveal">
             <p className="mb-3 text-sm font-semibold tracking-[0.16em] uppercase" style={{ color: "var(--color-primary)" }}>
               From Our Community
             </p>
@@ -231,10 +231,10 @@ export default function HomePage() {
                 name: "A Windhoek parent",
                 tag: "Parent of a Grade 8 learner",
               },
-            ].map(({ quote, name, tag }) => (
+            ].map(({ quote, name, tag }, i) => (
               <figure
                 key={tag}
-                className="rounded-2xl p-8"
+                className={`rounded-2xl p-8 card-lift reveal reveal-delay-${i + 1}`}
                 style={{ background: "var(--color-surface-container-lowest)", boxShadow: "var(--shadow-ambient)", border: "1px solid rgba(94,0,129,0.18)" }}
               >
                 <blockquote
@@ -259,7 +259,7 @@ export default function HomePage() {
         className="px-6 py-20"
       >
         <div className="mx-auto max-w-5xl">
-          <div className="mb-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mb-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between reveal">
             <div>
               <p className="mb-1 text-sm font-semibold tracking-[0.16em] uppercase" style={{ color: "var(--color-primary)" }}>
                 Gallery
@@ -278,10 +278,10 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-            {galleryPreview.map(({ src, alt }) => (
+            {galleryPreview.map(({ src, alt }, i) => (
               <div
                 key={src}
-                className="relative aspect-4/3 overflow-hidden rounded-2xl"
+                className={`relative aspect-4/3 overflow-hidden rounded-2xl reveal reveal-delay-${Math.min(i + 1, 4)}`}
                 style={{ boxShadow: "var(--shadow-ambient)", border: "1px solid rgba(94,0,129,0.15)" }}
               >
                 <Image

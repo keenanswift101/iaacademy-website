@@ -139,7 +139,7 @@ export default function HeroCarousel() {
         </div>
 
         <p
-          className="mb-3 text-sm font-semibold tracking-[0.18em] uppercase"
+          className="mb-3 text-sm font-semibold tracking-[0.18em] uppercase animate-hero-1"
           style={{ color: "#f0c040" }}
         >
           Est. 2013 · Windhoek, Namibia
@@ -147,7 +147,7 @@ export default function HeroCarousel() {
 
         <h1
           id="hero-heading"
-          className="mb-6 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl"
+          className="mb-6 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl animate-hero-2"
           style={{ textShadow: "0 2px 20px rgba(0,0,0,0.4)" }}
         >
           Innovative Academics
@@ -156,7 +156,7 @@ export default function HeroCarousel() {
         </h1>
 
         <p
-          className="mx-auto mb-10 max-w-xl text-lg leading-relaxed sm:text-xl"
+          className="mx-auto mb-10 max-w-xl text-lg leading-relaxed sm:text-xl animate-hero-3"
           style={{ opacity: 0.88, textShadow: "0 1px 8px rgba(0,0,0,0.35)" }}
         >
           Where every child&apos;s story matters. A safe, small-class Namibian
@@ -173,7 +173,7 @@ export default function HeroCarousel() {
           {slides[active].label}
         </p>
 
-        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center animate-hero-4">
           <Link
             href="/admissions/request-meeting"
             className="inline-flex h-14 min-w-[180px] items-center justify-center rounded-full px-8 text-base font-semibold transition-all hover:scale-105 focus-visible:ring-2 focus-visible:ring-white btn-gold-metal"
