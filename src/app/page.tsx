@@ -372,7 +372,7 @@ export default function HomePage() {
               />
               <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)" }} aria-hidden="true" />
               <div className="absolute bottom-4 left-4">
-                <span className="rounded-full px-3 py-1 text-xs font-bold" style={{ background: "rgba(240,192,64,0.92)", color: "#1a1c1e" }}>🏊 Student Spotlight</span>
+                <span className="rounded-full px-3 py-1 text-xs font-bold" style={{ background: "rgba(240,192,64,0.92)", color: "#1a1c1e" }}>Student Spotlight</span>
               </div>
             </div>
             <div className="p-6 flex-1 flex flex-col">

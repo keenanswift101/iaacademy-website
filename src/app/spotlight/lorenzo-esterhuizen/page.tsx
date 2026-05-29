@@ -60,7 +60,7 @@ export default function LorenzoSpotlightPage() {
             {/* Bio */}
             <div className="flex-1">
               <div className="mb-6 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold" style={{ background: "rgba(94,0,129,0.10)", color: "var(--color-primary)" }}>
-                🏊 Swimming · Namibia National Team
+                Swimming · Namibia National Team
               </div>
               <h2 className="mb-1 text-3xl font-bold" style={{ color: "var(--color-on-surface)" }}>Lorenzo Ethan Esterhuizen</h2>
               <p className="mb-6 text-sm font-medium" style={{ color: "var(--color-primary)" }}>Age 16 · Born 8 April 2009 · Windhoek, Namibia</p>

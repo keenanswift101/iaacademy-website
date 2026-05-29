@@ -13,12 +13,26 @@ type CalendarEvent = {
 const YEAR = 2026;
 
 const events: CalendarEvent[] = [
-  { month: 0,  day: 12, title: "Term 1 Start",    description: "First day of Term 1 — all learners report at 07:30.", color: "primary" },
-  { month: 3,  day: 28, title: "Term 1 End",      description: "Last day of Term 1. End of term assessments completed.", color: "gold" },
-  { month: 5,  day: 1,  title: "Term 2 Start",    description: "First day of Term 2 — all learners report at 07:30.", color: "primary" },
-  { month: 7,  day: 20, title: "Term 2 End",      description: "Last day of Term 2.", color: "gold" },
-  { month: 8,  day: 7,  title: "Term 3 Start",    description: "First day of Term 3 — all learners report at 07:30.", color: "primary" },
-  { month: 11, day: 4,  title: "Term 3 End",      description: "Last day of Term 3. End of year assessments completed.", color: "gold" },
+  // Term dates
+  { month: 0,  day: 12, title: "Term 1 Start",     description: "First day of Term 1 — all learners report at 07:30.", color: "primary" },
+  { month: 3,  day: 28, title: "Term 1 End",       description: "Last day of Term 1. End of term assessments completed.", color: "gold" },
+  { month: 5,  day: 1,  title: "Term 2 Start",     description: "First day of Term 2 — all learners report at 07:30.", color: "primary" },
+  { month: 7,  day: 20, title: "Term 2 End",       description: "Last day of Term 2.", color: "gold" },
+  { month: 8,  day: 7,  title: "Term 3 Start",     description: "First day of Term 3 — all learners report at 07:30.", color: "primary" },
+  { month: 11, day: 4,  title: "Term 3 End",       description: "Last day of Term 3. End of year assessments completed.", color: "gold" },
+  // Namibian Public Holidays 2026
+  { month: 0,  day: 1,  title: "New Year's Day",   description: "Public holiday — school closed.", color: "holiday" },
+  { month: 2,  day: 21, title: "Independence Day", description: "Namibia Independence Day — school closed. Celebrating 36 years of independence.", color: "holiday" },
+  { month: 3,  day: 3,  title: "Good Friday",      description: "Public holiday — school closed.", color: "holiday" },
+  { month: 3,  day: 6,  title: "Easter Monday",    description: "Public holiday — school closed.", color: "holiday" },
+  { month: 4,  day: 1,  title: "Workers' Day",     description: "International Workers' Day — public holiday, school closed.", color: "holiday" },
+  { month: 4,  day: 4,  title: "Cassinga Day",     description: "Cassinga Day — public holiday, school closed.", color: "holiday" },
+  { month: 4,  day: 14, title: "Ascension Day",    description: "Public holiday — school closed.", color: "holiday" },
+  { month: 4,  day: 25, title: "Africa Day",       description: "Africa Day — public holiday, school closed.", color: "holiday" },
+  { month: 7,  day: 26, title: "Heroes' Day",      description: "Heroes' Day (Namibia Day) — public holiday, school closed.", color: "holiday" },
+  { month: 11, day: 10, title: "Human Rights Day", description: "Human Rights Day — public holiday, school closed.", color: "holiday" },
+  { month: 11, day: 25, title: "Christmas Day",    description: "Christmas Day — public holiday, school closed.", color: "holiday" },
+  { month: 11, day: 26, title: "Family Day",       description: "Family Day (Boxing Day) — public holiday, school closed.", color: "holiday" },
 ];
 
 const tbdEvents = [
@@ -79,14 +93,14 @@ function CalendarMonth({ month, year, events: evts, onDayClick, selectedDay }: {
               style={{
                 cursor: evt ? "pointer" : "default",
                 background: isSelected && evt
-                  ? "var(--color-primary)"
+                  ? evt.color === "holiday" ? "#c0392b" : "var(--color-primary)"
                   : evt
-                  ? evt.color === "gold" ? "rgba(240,192,64,0.22)" : "rgba(94,0,129,0.14)"
+                  ? evt.color === "gold" ? "rgba(240,192,64,0.22)" : evt.color === "holiday" ? "rgba(192,57,43,0.12)" : "rgba(94,0,129,0.14)"
                   : "transparent",
                 color: isSelected && evt
-                  ? "var(--color-on-primary)"
+                  ? "#fff"
                   : evt
-                  ? evt.color === "gold" ? "#7a5c00" : "var(--color-primary)"
+                  ? evt.color === "gold" ? "#7a5c00" : evt.color === "holiday" ? "#c0392b" : "var(--color-primary)"
                   : isToday ? "var(--color-primary)" : "var(--color-on-surface)",
                 fontWeight: evt || isToday ? 700 : 400,
                 outline: isToday && !isSelected ? "2px solid var(--color-primary)" : "none",
@@ -98,7 +112,7 @@ function CalendarMonth({ month, year, events: evts, onDayClick, selectedDay }: {
               {evt && !isSelected && (
                 <span
                   className="absolute bottom-0.5 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full"
-                  style={{ background: evt.color === "gold" ? "#b8860b" : "var(--color-primary)" }}
+                  style={{ background: evt.color === "gold" ? "#b8860b" : evt.color === "holiday" ? "#c0392b" : "var(--color-primary)" }}
                   aria-hidden="true"
                 />
               )}
@@ -130,10 +144,15 @@ export default function EventsClient() {
     setCurrentMonth((m) => (m === 11 ? 0 : m + 1));
   }
 
-  // Group list events by month
-  const eventsByMonth = MONTH_NAMES.map((name, idx) => ({
+  // Group list events by month (exclude holidays from main list — shown separately)
+  const termEventsByMonth = MONTH_NAMES.map((name, idx) => ({
     name,
-    events: events.filter((e) => e.month === idx),
+    events: events.filter((e) => e.month === idx && e.color !== "holiday"),
+  })).filter((m) => m.events.length > 0);
+
+  const holidaysByMonth = MONTH_NAMES.map((name, idx) => ({
+    name,
+    events: events.filter((e) => e.month === idx && e.color === "holiday"),
   })).filter((m) => m.events.length > 0);
 
   return (
@@ -163,7 +182,7 @@ export default function EventsClient() {
       {view === "list" && (
         <section className="px-6 py-12" style={{ background: "var(--color-surface)" }}>
           <div className="mx-auto max-w-4xl">
-            {eventsByMonth.map(({ name, events: evts }) => (
+            {termEventsByMonth.map(({ name, events: evts }) => (
               <div key={name} className="mb-10">
                 <h2 className="mb-6 text-lg font-bold" style={{ color: "var(--color-on-surface)" }}>{name} {YEAR}</h2>
                 <div className="space-y-4">
@@ -209,6 +228,30 @@ export default function EventsClient() {
                   </div>
                 ))}
               </div>
+            </div>
+
+            {/* Public holidays */}
+            <div className="mb-6">
+              <h2 className="mb-6 text-lg font-bold" style={{ color: "var(--color-on-surface)" }}>Namibian Public Holidays 2026</h2>
+              {holidaysByMonth.map(({ name, events: evts }) => (
+                <div key={name} className="mb-6">
+                  <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider" style={{ color: "var(--color-on-surface-variant)" }}>{name}</h3>
+                  <div className="space-y-3">
+                    {evts.map(({ day, title, description }) => (
+                      <div key={`hol-${name}-${day}`} className="flex gap-5 rounded-2xl p-5" style={{ background: "rgba(192,57,43,0.05)", border: "1px solid rgba(192,57,43,0.15)" }}>
+                        <div className="flex h-12 w-12 shrink-0 flex-col items-center justify-center rounded-xl text-center" style={{ background: "rgba(192,57,43,0.12)", color: "#c0392b" }}>
+                          <span className="text-lg font-bold leading-none">{day}</span>
+                          <span className="text-[10px] font-semibold uppercase">{name.slice(0, 3)}</span>
+                        </div>
+                        <div>
+                          <p className="font-semibold text-sm" style={{ color: "var(--color-on-surface)" }}>{title}</p>
+                          <p className="mt-1 text-sm leading-relaxed" style={{ color: "var(--color-on-surface-variant)" }}>{description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -266,6 +309,10 @@ export default function EventsClient() {
                 Term end
               </div>
               <div className="flex items-center gap-2 text-xs" style={{ color: "var(--color-on-surface-variant)" }}>
+                <span className="h-3 w-3 rounded-full" style={{ background: "rgba(192,57,43,0.12)", border: "1.5px solid #c0392b" }} />
+                Public holiday
+              </div>
+              <div className="flex items-center gap-2 text-xs" style={{ color: "var(--color-on-surface-variant)" }}>
                 <span className="h-3 w-3 rounded-full" style={{ outline: "2px solid var(--color-primary)", outlineOffset: "1px" }} />
                 Today
               </div>
@@ -275,10 +322,15 @@ export default function EventsClient() {
             {selectedEvent && (
               <div
                 className="mt-6 rounded-2xl p-5"
-                style={{ background: "linear-gradient(135deg, rgba(94,0,129,0.10) 0%, rgba(240,192,64,0.07) 100%)", border: "1px solid rgba(94,0,129,0.22)" }}
+                style={{
+                  background: selectedEvent.color === "holiday"
+                    ? "rgba(192,57,43,0.07)"
+                    : "linear-gradient(135deg, rgba(94,0,129,0.10) 0%, rgba(240,192,64,0.07) 100%)",
+                  border: selectedEvent.color === "holiday" ? "1px solid rgba(192,57,43,0.25)" : "1px solid rgba(94,0,129,0.22)",
+                }}
               >
-                <p className="mb-1 text-xs font-semibold uppercase tracking-widest" style={{ color: "var(--color-primary)" }}>
-                  {selectedEvent.day} {MONTH_NAMES[currentMonth]} {YEAR}
+                <p className="mb-1 text-xs font-semibold uppercase tracking-widest" style={{ color: selectedEvent.color === "holiday" ? "#c0392b" : "var(--color-primary)" }}>
+                  {selectedEvent.color === "holiday" ? "Public Holiday · " : ""}{selectedEvent.day} {MONTH_NAMES[currentMonth]} {YEAR}
                 </p>
                 <p className="font-bold text-base" style={{ color: "var(--color-on-surface)" }}>{selectedEvent.title}</p>
                 <p className="mt-1 text-sm leading-relaxed" style={{ color: "var(--color-on-surface-variant)" }}>{selectedEvent.description}</p>
