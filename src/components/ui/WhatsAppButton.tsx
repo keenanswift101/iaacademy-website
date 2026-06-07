@@ -12,7 +12,6 @@ export default function WhatsAppButton() {
         background: "#25D366",
         color: "#fff",
         boxShadow: "0 4px 24px rgba(37,211,102,0.35)",
-        focusVisibleRingColor: "#25D366",
       }}
     >
       <svg
