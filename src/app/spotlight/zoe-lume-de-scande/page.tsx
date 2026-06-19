@@ -29,12 +29,12 @@ export default function ZoeLumeDeScandePage() {
             className="rounded-2xl overflow-hidden flex flex-col sm:flex-row mb-12"
             style={{ background: "var(--color-surface-container-lowest)", boxShadow: "var(--shadow-ambient)", border: "1px solid rgba(94,0,129,0.18)" }}
           >
-            <div className="relative w-full sm:w-80 shrink-0 overflow-hidden" style={{ minHeight: "340px" }}>
+            <div className="relative w-full sm:w-80 shrink-0 overflow-hidden" style={{ minHeight: "420px" }}>
               <Image
                 src="/images/sports/gymnastics/gymnastics_1.png"
                 alt="Zoé Lumé de Scande on the podium in first place at the Namibian Rhythmic Gymnastics Qualifying Competition"
                 fill
-                className="object-cover object-top"
+                className="object-cover object-center"
                 sizes="(max-width: 640px) 100vw, 320px"
                 priority
               />

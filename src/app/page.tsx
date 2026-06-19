@@ -339,6 +339,7 @@ export default function HomePage() {
             </div>
             <ul className="space-y-4">
               {[
+                { date: "12 Jun 2026", title: "Gymnastics gold & silver at Namibian 1st Qualifying Competition — Zoé (1st) & Hayley (2nd)" },
                 { date: "16 May 2026", title: "Charldon wins Men's Senior B at Wanderers Closed squash tournament" },
                 { date: "Term 2", title: "Term 2 begins 1 June 2026 — school hours 07:15–13:30" },
               ].map(({ date, title }) => (
