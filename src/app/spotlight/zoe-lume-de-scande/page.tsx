@@ -34,7 +34,8 @@ export default function ZoeLumeDeScandePage() {
                 src="/images/sports/gymnastics/gymnastics_1.png"
                 alt="Zoé Lumé de Scande on the podium in first place at the Namibian Rhythmic Gymnastics Qualifying Competition"
                 fill
-                className="object-cover object-center"
+                className="object-cover"
+                style={{ objectPosition: "50% 55%" }}
                 sizes="(max-width: 640px) 100vw, 320px"
                 priority
               />
