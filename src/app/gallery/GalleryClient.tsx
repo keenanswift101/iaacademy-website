@@ -23,8 +23,10 @@ const allImages: { src: string; alt: string; category: Exclude<Category, "All">;
   { src: "/images/sports/swimming/lorenzo-medals-collection.png", alt: "Lorenzo with his full medal collection", category: "Swimming", objectPosition: "50% 0%" },
   { src: "/images/sports/swimming/lorenzo-namibia-team-africa-championships-algeria.jpeg", alt: "Namibia Aquatics team at the 17th Africa Championships in Algeria", category: "Swimming", objectPosition: "50% 0%" },
   { src: "/images/sports/squash/charldon-wanderers-closed-b-senior-trophy.jpeg", alt: "Charldon winning the Men's Senior B Division at the Wanderers Closed squash tournament", category: "Squash", objectPosition: "50% 0%" },
-  { src: "/images/sports/gymnastics/gymnastics_1.png", alt: "Zoé Lumé de Scande — 1st place, Level 1 Rhythmic Gymnastics, Walvis Bay 2026", category: "Gymnastics", objectPosition: "50% 38%" },
+  { src: "/images/sports/gymnastics/gymnastics_1.png", alt: "Zoé Lumé de Scande — 1st place, Level 1 Rhythmic Gymnastics, Walvis Bay 2026", category: "Gymnastics", objectPosition: "50% 22%" },
   { src: "/images/sports/gymnastics/gymnastics_2.png", alt: "Hayley du Toit — 2nd place, Level 6 Rhythmic Gymnastics, Walvis Bay 2026", category: "Gymnastics", objectPosition: "50% 15%" },
+  { src: "/images/sports/gymnastics/gymnastics_3.png", alt: "Podium — Namibian Rhythmic Gymnastics 1st Qualifying Competition, Walvis Bay 2026", category: "Gymnastics", objectPosition: "50% 30%" },
+  { src: "/images/sports/gymnastics/gymnastics_4.png", alt: "Zoé Lumé de Scande and teammate with gymnastics balls, Walvis Bay 2026", category: "Gymnastics", objectPosition: "50% 25%" },
 ];
 
 const categories: Category[] = ["All", "School Life", "Swimming", "Squash", "Gymnastics"];
