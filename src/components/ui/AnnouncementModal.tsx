@@ -93,7 +93,7 @@ export default function AnnouncementModal() {
         {/* Poster image */}
         <a href="/admissions" onClick={close} aria-label="Apply now — Admissions open for 2027">
           <Image
-            src="/images/admission-poster-2027.png"
+            src="/admissions_poster.png"
             alt="IA Academy — Admission Now Open for 2027, Grades RR to Grade 11"
             width={840}
             height={1050}
