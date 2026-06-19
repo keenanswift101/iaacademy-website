@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 
 const spotlights = [
   {
-    href: "/spotlight/lorenzo-esterhuizen",
-    name: "Lorenzo Esterhuizen",
-    tag: "Swimming · Namibia National Team",
-    summary: "Namibian Junior National Swimming Champion with 14+ national records, continental medals, and an Olympic dream — Youth Olympics Dakar 2026 and Los Angeles 2028.",
-    image: "/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.png",
-    badge: "Olympic Hopeful — Youth Olympics Dakar 2026",
+    href: "/spotlight/zoe-lume-de-scande",
+    name: "Zoé Lumé de Scande",
+    tag: "Rhythmic Gymnastics · Level 1",
+    summary: "Gold medallist and first-place finisher at the Namibian Rhythmic Gymnastics 1st Qualifying Competition in Walvis Bay, June 2026. Competing in Free Dance and Ball at Level 1.",
+    image: "/images/sports/gymnastics/gymnastics_1.png",
+    badge: "Gold — Namibian Qualifying Competition 2026",
   },
   {
     href: "/spotlight/hayley-du-toit",
@@ -26,12 +26,12 @@ const spotlights = [
     badge: "Silver — Namibian Qualifying Competition 2026",
   },
   {
-    href: "/spotlight/zoe-lume-de-scande",
-    name: "Zoé Lumé de Scande",
-    tag: "Rhythmic Gymnastics · Level 1",
-    summary: "Gold medallist and first-place finisher at the Namibian Rhythmic Gymnastics 1st Qualifying Competition in Walvis Bay, June 2026. Competing in Free Dance and Ball at Level 1.",
-    image: "/images/sports/gymnastics/gymnastics_1.png",
-    badge: "Gold — Namibian Qualifying Competition 2026",
+    href: "/spotlight/lorenzo-esterhuizen",
+    name: "Lorenzo Esterhuizen",
+    tag: "Swimming · Namibia National Team",
+    summary: "Namibian Junior National Swimming Champion with 14+ national records, continental medals, and an Olympic dream — Youth Olympics Dakar 2026 and Los Angeles 2028.",
+    image: "/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.png",
+    badge: "Olympic Hopeful — Youth Olympics Dakar 2026",
   },
 ];
 
