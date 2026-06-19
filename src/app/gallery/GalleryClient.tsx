@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-type Category = "All" | "School Life" | "Swimming" | "Squash";
+type Category = "All" | "School Life" | "Swimming" | "Squash" | "Gymnastics";
 
 const allImages: { src: string; alt: string; category: Exclude<Category, "All">; pos?: string }[] = [
   { src: "/images/school-life-01.jpeg", alt: "Pupils at IA Academy", category: "School Life" },
@@ -23,9 +23,11 @@ const allImages: { src: string; alt: string; category: Exclude<Category, "All">;
   { src: "/images/sports/swimming/lorenzo-medals-collection.png", alt: "Lorenzo with his full medal collection", category: "Swimming", pos: "object-top" },
   { src: "/images/sports/swimming/lorenzo-namibia-team-africa-championships-algeria.jpeg", alt: "Namibia Aquatics team at the 17th Africa Championships in Algeria", category: "Swimming", pos: "object-top" },
   { src: "/images/sports/squash/charldon-wanderers-closed-b-senior-trophy.jpeg", alt: "Charldon winning the Men's Senior B Division at the Wanderers Closed squash tournament", category: "Squash", pos: "object-top" },
+  { src: "/images/sports/gymnastics/gymnastics_1.png", alt: "Zoé Lumé de Scande — 1st place, Level 1 Rhythmic Gymnastics, Walvis Bay 2026", category: "Gymnastics", pos: "object-top" },
+  { src: "/images/sports/gymnastics/gymnastics_2.png", alt: "Hayley du Toit — 2nd place, Level 6 Rhythmic Gymnastics, Walvis Bay 2026", category: "Gymnastics", pos: "object-top" },
 ];
 
-const categories: Category[] = ["All", "School Life", "Swimming", "Squash"];
+const categories: Category[] = ["All", "School Life", "Swimming", "Squash", "Gymnastics"];
 
 
 export default function GalleryClient() {

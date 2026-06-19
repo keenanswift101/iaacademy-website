@@ -52,6 +52,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/events`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE_URL}/spotlight`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/spotlight/lorenzo-esterhuizen`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE_URL}/spotlight/hayley-du-toit`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE_URL}/spotlight/zoe-lume-de-scande`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
 
     // Contact
     { url: `${BASE_URL}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },

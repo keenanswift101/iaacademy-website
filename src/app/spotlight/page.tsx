@@ -17,6 +17,22 @@ const spotlights = [
     image: "/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.png",
     badge: "Olympic Hopeful — Youth Olympics Dakar 2026",
   },
+  {
+    href: "/spotlight/hayley-du-toit",
+    name: "Hayley du Toit",
+    tag: "Rhythmic Gymnastics · Level 6",
+    summary: "Silver medallist at the Namibian Rhythmic Gymnastics 1st Qualifying Competition in Walvis Bay, June 2026. Competing in Free Dance, Ribbon, and Rope at Level 6.",
+    image: "/images/sports/gymnastics/gymnastics_2.png",
+    badge: "Silver — Namibian Qualifying Competition 2026",
+  },
+  {
+    href: "/spotlight/zoe-lume-de-scande",
+    name: "Zoé Lumé de Scande",
+    tag: "Rhythmic Gymnastics · Level 1",
+    summary: "Gold medallist and first-place finisher at the Namibian Rhythmic Gymnastics 1st Qualifying Competition in Walvis Bay, June 2026. Competing in Free Dance and Ball at Level 1.",
+    image: "/images/sports/gymnastics/gymnastics_1.png",
+    badge: "Gold — Namibian Qualifying Competition 2026",
+  },
 ];
 
 export default function SpotlightPage() {

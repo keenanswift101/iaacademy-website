@@ -81,7 +81,7 @@ export default function AnnouncementModal() {
         style={{
           position: "relative",
           width: "100%",
-          maxWidth: "420px",
+          maxWidth: "540px",
           borderRadius: "1.25rem",
           overflow: "hidden",
           boxShadow: "0 32px 80px rgba(0,0,0,0.45)",
@@ -91,7 +91,7 @@ export default function AnnouncementModal() {
         }}
       >
         {/* Poster image */}
-        <a href="/admissions" onClick={close} aria-label="Apply now — Admissions open for 2027">
+        <a href="/admissions/request-meeting" onClick={close} aria-label="Apply now — Admissions open for 2027">
           <Image
             src="/admissions_poster.png"
             alt="IA Academy — Admission Now Open for 2027, Grades RR to Grade 11"
