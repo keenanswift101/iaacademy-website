@@ -3,6 +3,7 @@ import Image from "next/image";
 import HeroCarousel from "@/components/ui/HeroCarousel";
 import AnnouncementModal from "@/components/ui/AnnouncementModal";
 import AnthemPlayer from "@/components/ui/AnthemPlayer";
+import SpotlightWidget from "@/components/ui/SpotlightWidget";
 
 /* ─────────────────────────────────────────────
    IA Academy — Home Page
@@ -359,36 +360,7 @@ export default function HomePage() {
           </div>
 
           {/* Student Spotlight widget — Gymnastics */}
-          <Link
-            href="/spotlight"
-            className="group rounded-2xl overflow-hidden flex flex-col"
-            style={{ background: "var(--color-surface-container-lowest)", boxShadow: "var(--shadow-ambient)", border: "1px solid rgba(94,0,129,0.20)" }}
-          >
-            <div className="relative aspect-4/3 w-full overflow-hidden">
-              <Image
-                src="/images/sports/gymnastics/gymnastics_3.png"
-                alt="Zoé Lumé de Scande on the podium in first place — Namibian Rhythmic Gymnastics Qualifying Competition 2026"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                style={{ objectPosition: "20% 30%" }}
-                sizes="(max-width: 640px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)" }} aria-hidden="true" />
-              <div className="absolute bottom-4 left-4">
-                <span className="rounded-full px-3 py-1 text-xs font-bold" style={{ background: "rgba(240,192,64,0.92)", color: "#1a1c1e" }}>Student Spotlight</span>
-              </div>
-            </div>
-            <div className="p-6 flex-1 flex flex-col">
-              <div className="flex items-center justify-between mb-2">
-                <h2 className="text-xl font-bold" style={{ color: "var(--color-on-surface)" }}>Gymnastics — Gold &amp; Silver</h2>
-                <span className="text-sm font-semibold transition-colors group-hover:opacity-80" style={{ color: "var(--color-primary)" }}>Read more →</span>
-              </div>
-              <p className="text-xs font-semibold mb-3 uppercase tracking-wide" style={{ color: "var(--color-primary)" }}>Namibian Rhythmic Gymnastics · Walvis Bay 2026</p>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--color-on-surface-variant)" }}>
-                Zoé Lumé de Scande took gold (Level 1) and Hayley du Toit silver (Level 6) at the Namibian 1st Qualifying Competition in Walvis Bay — two IA Academy gymnasts on the podium.
-              </p>
-            </div>
-          </Link>
+          <SpotlightWidget />
         </div>
       </section>
 
