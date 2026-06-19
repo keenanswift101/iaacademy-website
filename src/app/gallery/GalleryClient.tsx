@@ -5,7 +5,7 @@ import { useState } from "react";
 
 type Category = "All" | "School Life" | "Swimming" | "Squash" | "Gymnastics";
 
-const allImages: { src: string; alt: string; category: Exclude<Category, "All">; pos?: string }[] = [
+const allImages: { src: string; alt: string; category: Exclude<Category, "All">; objectPosition?: string }[] = [
   { src: "/images/school-life-01.jpeg", alt: "Pupils at IA Academy", category: "School Life" },
   { src: "/images/school-life-02.jpeg", alt: "Classroom life at IA Academy", category: "School Life" },
   { src: "/images/school-life-03.jpeg", alt: "Learning at IA Academy", category: "School Life" },
@@ -18,17 +18,16 @@ const allImages: { src: string; alt: string; category: Exclude<Category, "All">;
   { src: "/images/school-life-10.jpeg", alt: "School environment", category: "School Life" },
   { src: "/images/school-life-11.jpeg", alt: "Pupils at IA Academy", category: "School Life" },
   { src: "/images/school-life-12.jpeg", alt: "Life at IA Academy", category: "School Life" },
-  { src: "/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.png", alt: "Lorenzo Esterhuizen on the podium at the Africa Youth Games in Angola", category: "Swimming", pos: "object-top" },
-  { src: "/images/sports/swimming/lorenzo-africa-junior-championships-medal.png", alt: "Lorenzo at the Africa Junior Championships holding medal", category: "Swimming", pos: "object-top" },
-  { src: "/images/sports/swimming/lorenzo-medals-collection.png", alt: "Lorenzo with his full medal collection", category: "Swimming", pos: "object-top" },
-  { src: "/images/sports/swimming/lorenzo-namibia-team-africa-championships-algeria.jpeg", alt: "Namibia Aquatics team at the 17th Africa Championships in Algeria", category: "Swimming", pos: "object-top" },
-  { src: "/images/sports/squash/charldon-wanderers-closed-b-senior-trophy.jpeg", alt: "Charldon winning the Men's Senior B Division at the Wanderers Closed squash tournament", category: "Squash", pos: "object-top" },
-  { src: "/images/sports/gymnastics/gymnastics_1.png", alt: "Zoé Lumé de Scande — 1st place, Level 1 Rhythmic Gymnastics, Walvis Bay 2026", category: "Gymnastics", pos: "object-[center_55%]" },
-  { src: "/images/sports/gymnastics/gymnastics_2.png", alt: "Hayley du Toit — 2nd place, Level 6 Rhythmic Gymnastics, Walvis Bay 2026", category: "Gymnastics", pos: "object-top" },
+  { src: "/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.png", alt: "Lorenzo Esterhuizen on the podium at the Africa Youth Games in Angola", category: "Swimming", objectPosition: "50% 0%" },
+  { src: "/images/sports/swimming/lorenzo-africa-junior-championships-medal.png", alt: "Lorenzo at the Africa Junior Championships holding medal", category: "Swimming", objectPosition: "50% 0%" },
+  { src: "/images/sports/swimming/lorenzo-medals-collection.png", alt: "Lorenzo with his full medal collection", category: "Swimming", objectPosition: "50% 0%" },
+  { src: "/images/sports/swimming/lorenzo-namibia-team-africa-championships-algeria.jpeg", alt: "Namibia Aquatics team at the 17th Africa Championships in Algeria", category: "Swimming", objectPosition: "50% 0%" },
+  { src: "/images/sports/squash/charldon-wanderers-closed-b-senior-trophy.jpeg", alt: "Charldon winning the Men's Senior B Division at the Wanderers Closed squash tournament", category: "Squash", objectPosition: "50% 0%" },
+  { src: "/images/sports/gymnastics/gymnastics_1.png", alt: "Zoé Lumé de Scande — 1st place, Level 1 Rhythmic Gymnastics, Walvis Bay 2026", category: "Gymnastics", objectPosition: "50% 38%" },
+  { src: "/images/sports/gymnastics/gymnastics_2.png", alt: "Hayley du Toit — 2nd place, Level 6 Rhythmic Gymnastics, Walvis Bay 2026", category: "Gymnastics", objectPosition: "50% 15%" },
 ];
 
 const categories: Category[] = ["All", "School Life", "Swimming", "Squash", "Gymnastics"];
-
 
 export default function GalleryClient() {
   const [active, setActive] = useState<Category>("All");
@@ -73,7 +72,7 @@ export default function GalleryClient() {
 
         {/* Grid */}
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-          {filtered.map(({ src, alt, pos = "object-center" }) => (
+          {filtered.map(({ src, alt, objectPosition = "50% 50%" }) => (
             <div
               key={src}
               className="relative aspect-4/3 overflow-hidden rounded-2xl"
@@ -83,7 +82,8 @@ export default function GalleryClient() {
                 src={src}
                 alt={alt}
                 fill
-                className={`object-cover ${pos} transition-transform duration-300 hover:scale-105`}
+                className="object-cover transition-transform duration-300 hover:scale-105"
+                style={{ objectPosition }}
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
               />
             </div>

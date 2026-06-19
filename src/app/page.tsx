@@ -366,11 +366,11 @@ export default function HomePage() {
           >
             <div className="relative aspect-4/3 w-full overflow-hidden">
               <Image
-                src="/images/sports/gymnastics/gymnastics_2.png"
-                alt="Hayley du Toit holding her silver medal certificate at the Namibian Rhythmic Gymnastics Qualifying Competition"
+                src="/images/sports/gymnastics/gymnastics_1.png"
+                alt="Zoé Lumé de Scande on the podium — 1st place at the Namibian Rhythmic Gymnastics Qualifying Competition"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
-                style={{ objectPosition: "50% 20%" }}
+                style={{ objectPosition: "50% 38%" }}
                 sizes="(max-width: 640px) 100vw, 50vw"
               />
               <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)" }} aria-hidden="true" />
