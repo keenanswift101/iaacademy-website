@@ -10,6 +10,14 @@ export const metadata: Metadata = {
 
 const spotlights = [
   {
+    href: "/spotlight/football-vs-parkies-2026",
+    name: "Football — IA Academy vs Parkies PS",
+    tag: "Football · 30 June 2026",
+    summary: "IA Academy Private School faced Parkies Primary School in a two-game football fixture. Game 1: Win 2–1. Game 2: Loss 1–3. Our players represented the school with pride on the pitch.",
+    image: "/images/sports/soccer_match1.png",
+    badge: "Game 1 Win 2–1 · Game 2 Loss 1–3",
+  },
+  {
     href: "/spotlight/zoe-lume-de-scande",
     name: "Zoé Lumé de Scande",
     tag: "Rhythmic Gymnastics · Level 1",
