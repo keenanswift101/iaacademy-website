@@ -5,11 +5,11 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const slides = [
-  { src: "/images/sports/soccer_match1.png", objectPosition: "50% 30%" },
-  { src: "/images/sports/gymnastics/gymnastics_3.png", objectPosition: "20% 30%" },
-  { src: "/images/sports/gymnastics/gymnastics_1.png", objectPosition: "50% 22%" },
-  { src: "/images/sports/gymnastics/gymnastics_4.png", objectPosition: "50% 25%" },
-  { src: "/images/sports/gymnastics/gymnastics_2.png", objectPosition: "50% 15%" },
+  { src: "/images/sports/soccer_match1.png", objectPosition: "50% 50%", contain: true },
+  { src: "/images/sports/gymnastics/gymnastics_3.png", objectPosition: "20% 30%", contain: false },
+  { src: "/images/sports/gymnastics/gymnastics_1.png", objectPosition: "50% 22%", contain: false },
+  { src: "/images/sports/gymnastics/gymnastics_4.png", objectPosition: "50% 25%", contain: false },
+  { src: "/images/sports/gymnastics/gymnastics_2.png", objectPosition: "50% 15%", contain: false },
 ];
 
 export default function SpotlightWidget() {
@@ -46,12 +46,15 @@ export default function SpotlightWidget() {
       onMouseEnter={startCycling}
       onMouseLeave={stopCycling}
     >
-      <div className="relative aspect-4/3 w-full overflow-hidden">
+      <div
+        className="relative aspect-4/3 w-full overflow-hidden"
+        style={{ background: slides[current].contain ? "#1a0a2e" : undefined }}
+      >
         <Image
           src={slides[current].src}
-          alt="IA Academy gymnastics students — Namibian Rhythmic Gymnastics Qualifying Competition 2026"
+          alt="IA Academy sport highlights 2026"
           fill
-          className="object-cover group-hover:scale-105"
+          className={`${slides[current].contain ? "object-contain" : "object-cover"} group-hover:scale-105`}
           style={{
             objectPosition: slides[current].objectPosition,
             opacity: fading ? 0 : 1,
