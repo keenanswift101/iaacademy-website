@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const slides = [
+  { src: "/images/sports/soccer_match1.png", objectPosition: "50% 30%" },
   { src: "/images/sports/gymnastics/gymnastics_3.png", objectPosition: "20% 30%" },
   { src: "/images/sports/gymnastics/gymnastics_1.png", objectPosition: "50% 22%" },
   { src: "/images/sports/gymnastics/gymnastics_4.png", objectPosition: "50% 25%" },
@@ -81,12 +82,12 @@ export default function SpotlightWidget() {
       </div>
       <div className="p-6 flex-1 flex flex-col">
         <div className="flex items-center justify-between mb-2">
-          <h2 className="text-xl font-bold" style={{ color: "var(--color-on-surface)" }}>Gymnastics — Gold &amp; Silver</h2>
+          <h2 className="text-xl font-bold" style={{ color: "var(--color-on-surface)" }}>IA Academy in Action</h2>
           <span className="text-sm font-semibold transition-colors group-hover:opacity-80" style={{ color: "var(--color-primary)" }}>Read more →</span>
         </div>
-        <p className="text-xs font-semibold mb-3 uppercase tracking-wide" style={{ color: "var(--color-primary)" }}>Namibian Rhythmic Gymnastics · Walvis Bay 2026</p>
+        <p className="text-xs font-semibold mb-3 uppercase tracking-wide" style={{ color: "var(--color-primary)" }}>Sport · June 2026</p>
         <p className="text-sm leading-relaxed" style={{ color: "var(--color-on-surface-variant)" }}>
-          Zoé Lumé de Scande took gold (Level 1) and Hayley du Toit silver (Level 6) at the Namibian 1st Qualifying Competition in Walvis Bay — two IA Academy gymnasts on the podium.
+          Football vs Parkies PS — Win 2–1, Loss 1–3 · Gymnastics gold for Zoé &amp; silver for Hayley at the Namibian Qualifying Competition, Walvis Bay.
         </p>
       </div>
     </Link>
