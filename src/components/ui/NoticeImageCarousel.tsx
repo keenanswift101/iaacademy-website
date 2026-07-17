@@ -39,7 +39,7 @@ export default function NoticeImageCarousel({ images, title }: Props) {
 
   return (
     <div
-      style={{ position: "relative", height: "300px", overflow: "hidden" }}
+      style={{ position: "relative", height: "420px", overflow: "hidden", background: "#111" }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -59,24 +59,14 @@ export default function NoticeImageCarousel({ images, title }: Props) {
             src={src}
             alt={i === 0 ? title : ""}
             fill
-            className="object-cover"
-            style={{ objectPosition: "50% 30%" }}
+            className="object-contain"
+            style={{ objectPosition: "50% 50%" }}
             sizes="(max-width: 768px) 100vw, 672px"
             priority={i === 0}
           />
         </div>
       ))}
 
-      {/* Bottom gradient */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background: "linear-gradient(to top, rgba(0,0,0,0.50) 0%, transparent 45%)",
-          pointerEvents: "none",
-        }}
-        aria-hidden="true"
-      />
 
       {/* Photo counter — top right */}
       {images.length > 1 && (
