@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
+import NoticeImageCarousel from "@/components/ui/NoticeImageCarousel";
 
 export const metadata: Metadata = {
   title: "Notice Board",
@@ -135,48 +135,9 @@ export default function NoticeBoardPage() {
                 boxShadow: "var(--shadow-ambient)",
               }}
             >
-              {/* Featured image — natural height, no cropping */}
+              {/* Image carousel */}
               {images && images.length > 0 && (
-                <div style={{ position: "relative" }}>
-                  <Image
-                    src={images[0]}
-                    alt={title}
-                    width={1200}
-                    height={900}
-                    style={{ width: "100%", height: "auto", display: "block" }}
-                    sizes="(max-width: 768px) 100vw, 672px"
-                  />
-                  {/* Gradient overlay */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      inset: 0,
-                      background: "linear-gradient(to top, rgba(0,0,0,0.30) 0%, transparent 50%)",
-                      pointerEvents: "none",
-                    }}
-                    aria-hidden="true"
-                  />
-                  {/* Photo count badge */}
-                  {images.length > 1 && (
-                    <span
-                      style={{
-                        position: "absolute",
-                        bottom: "10px",
-                        right: "12px",
-                        background: "rgba(0,0,0,0.60)",
-                        color: "#fff",
-                        fontSize: "11px",
-                        fontWeight: 600,
-                        padding: "3px 10px",
-                        borderRadius: "20px",
-                        backdropFilter: "blur(6px)",
-                        letterSpacing: "0.03em",
-                      }}
-                    >
-                      +{images.length - 1} photos
-                    </span>
-                  )}
-                </div>
+                <NoticeImageCarousel images={images} title={title} />
               )}
 
               {/* Card body */}
@@ -211,41 +172,6 @@ export default function NoticeBoardPage() {
                   {body}
                 </p>
 
-                {/* Thumbnail strip (remaining photos) */}
-                {images && images.length > 1 && (
-                  <div
-                    style={{
-                      display: "flex",
-                      gap: "6px",
-                      overflowX: "auto",
-                      marginTop: "16px",
-                      paddingBottom: "4px",
-                    }}
-                  >
-                    {images.slice(1).map((img, i) => (
-                      <div
-                        key={i}
-                        style={{
-                          position: "relative",
-                          flexShrink: 0,
-                          width: "88px",
-                          height: "64px",
-                          borderRadius: "8px",
-                          overflow: "hidden",
-                          border: "1px solid rgba(94,0,129,0.12)",
-                        }}
-                      >
-                        <Image
-                          src={img}
-                          alt=""
-                          fill
-                          className="object-cover"
-                          sizes="88px"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                )}
               </div>
             </article>
           ))}
