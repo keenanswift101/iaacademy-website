@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-type Category = "All" | "School Life" | "Swimming" | "Squash" | "Gymnastics" | "Football";
+type Category = "All" | "School Life" | "Swimming" | "Squash" | "Gymnastics" | "Football" | "Events";
 
 const allImages: { src: string; alt: string; category: Exclude<Category, "All">; objectPosition?: string }[] = [
   { src: "/images/school-life-01.jpeg", alt: "Pupils at IA Academy", category: "School Life" },
@@ -28,9 +28,22 @@ const allImages: { src: string; alt: string; category: Exclude<Category, "All">;
   { src: "/images/sports/gymnastics/gymnastics_3.png", alt: "Podium — Namibian Rhythmic Gymnastics 1st Qualifying Competition, Walvis Bay 2026", category: "Gymnastics", objectPosition: "50% 30%" },
   { src: "/images/sports/gymnastics/gymnastics_4.png", alt: "Zoé Lumé de Scande and teammate with gymnastics balls, Walvis Bay 2026", category: "Gymnastics", objectPosition: "50% 25%" },
   { src: "/images/sports/soccer_match1.png", alt: "IA Academy PS vs Parkies Primary School football match — 30 June 2026", category: "Football", objectPosition: "50% 30%" },
+  { src: "/images/events/smile-haven-visit/smile-haven-visit-dr-eliakim-team.jpeg", alt: "Dr. LN Eliakim and the Smile Haven team at IA Academy — Dental Hygiene visit, July 2026", category: "Events", objectPosition: "50% 30%" },
+  { src: "/images/events/smile-haven-visit/smile-haven-visit-full-assembly.jpeg", alt: "IA Academy learners assembled for the Smile Haven dental hygiene presentation, July 2026", category: "Events", objectPosition: "50% 35%" },
+  { src: "/images/events/smile-haven-visit/smile-haven-visit-presentation-banner.jpeg", alt: "Smile Haven team presenting dental hygiene tips to IA Academy learners, July 2026", category: "Events", objectPosition: "50% 40%" },
+  { src: "/images/events/smile-haven-visit/smile-haven-visit-learners-smiling.jpeg", alt: "IA Academy learners holding a dental model at the Smile Haven visit, July 2026", category: "Events", objectPosition: "50% 35%" },
+  { src: "/images/events/smile-haven-visit/smile-haven-visit-learner-dental-model.jpeg", alt: "Smile Haven team member with IA Academy learners and a dental model, July 2026", category: "Events", objectPosition: "50% 30%" },
+  { src: "/images/events/smile-haven-visit/smile-haven-visit-brushing-demo.jpeg", alt: "IA Academy learner demonstrating tooth brushing technique with Smile Haven, July 2026", category: "Events", objectPosition: "50% 30%" },
+  { src: "/images/events/smile-haven-visit/smile-haven-visit-young-learners.jpeg", alt: "Young IA Academy learners at the Smile Haven dental hygiene visit, July 2026", category: "Events", objectPosition: "50% 35%" },
+  { src: "/images/events/smile-haven-visit/smile-haven-visit-learners-assembly.jpeg", alt: "IA Academy full school gathering for the Smile Haven dental hygiene visit, July 2026", category: "Events", objectPosition: "50% 40%" },
+  { src: "/images/events/ium-career-fair/ium-career-fair-group-chancery.jpeg", alt: "IA Academy Grade 11 & 12 learners at the IUM Inbound Career Fair — Chancery building, July 2026", category: "Events", objectPosition: "50% 30%" },
+  { src: "/images/events/ium-career-fair/ium-career-fair-girls-group.jpeg", alt: "IA Academy learners at the IUM Career Fair, July 2026", category: "Events", objectPosition: "50% 40%" },
+  { src: "/images/events/ium-career-fair/ium-career-fair-group-2.jpeg", alt: "IA Academy learners outside IUM at the Inbound Career Fair, July 2026", category: "Events", objectPosition: "50% 30%" },
+  { src: "/images/events/ium-career-fair/ium-career-fair-with-representative.jpeg", alt: "IA Academy learners with an IUM representative at the Career Fair, July 2026", category: "Events", objectPosition: "50% 35%" },
+  { src: "/images/events/ium-career-fair/ium-career-fair-group-3.jpeg", alt: "IA Academy learners at the IUM Inbound Career Fair, July 2026", category: "Events", objectPosition: "50% 35%" },
 ];
 
-const categories: Category[] = ["All", "School Life", "Swimming", "Squash", "Gymnastics", "Football"];
+const categories: Category[] = ["All", "School Life", "Swimming", "Squash", "Gymnastics", "Football", "Events"];
 
 export default function GalleryClient() {
   const [active, setActive] = useState<Category>("All");

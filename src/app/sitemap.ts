@@ -55,6 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/spotlight/football-vs-parkies-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE_URL}/spotlight/hayley-du-toit`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE_URL}/spotlight/zoe-lume-de-scande`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE_URL}/events/ium-career-fair-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
 
     // Contact
     { url: `${BASE_URL}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },

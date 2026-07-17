@@ -121,6 +121,7 @@ command = "npm run build && cp -r public/. .next/"
 | `src/components/ui/CookieConsent.tsx` | Cookie consent banner |
 | `src/components/ui/ScrollToTop.tsx` | Scroll-to-top button |
 | `src/components/ui/AnthemPlayer.tsx` | School anthem audio player |
+| `src/components/ui/RecentEventsDrawer.tsx` | Fixed right-side sliding drawer — tab says "Recent Events" with pulsing gold "N New" badge and calendar icon. Slides open a 320px panel showing 3 latest events with thumbnails, dates, summaries, and "View all notices" link. Closes on Escape / click outside. z-index 45 (below WhatsApp at 50). Update `recentEvents` array to add new events. |
 
 ---
 
@@ -128,7 +129,7 @@ command = "npm run build && cp -r public/. .next/"
 
 File: `src/app/gallery/GalleryClient.tsx` (client component — `"use client"`)
 
-- Category filter pills: **All / School Life / Swimming / Squash / Gymnastics**
+- Category filter pills: **All / School Life / Swimming / Squash / Gymnastics / Football / Events**
 - Images use **inline `style={{ objectPosition }}`** (not Tailwind `object-*` classes) for precise crop control
 - `objectPosition` values per image control face/subject framing — adjust as `"x% y%"`
 - Grid: `aspect-4/3` tiles, 2 → 3 → 4 cols responsive
@@ -141,6 +142,9 @@ File: `src/app/gallery/GalleryClient.tsx` (client component — `"use client"`)
 | `public/images/sports/swimming/` | `lorenzo-africa-youth-games-angola-podium.png`, `lorenzo-africa-junior-championships-medal.png`, `lorenzo-medals-collection.png`, `lorenzo-namibia-team-africa-championships-algeria.jpeg` |
 | `public/images/sports/squash/` | `charldon-wanderers-closed-b-senior-trophy.jpeg` |
 | `public/images/sports/gymnastics/` | `gymnastics_1.png` (Zoé on podium), `gymnastics_2.png` (Hayley with certificate), `gymnastics_3.png` (full podium group), `gymnastics_4.png` (two gymnasts with balls) |
+| `public/images/sports/` | `soccer_match1.png` (IA Academy vs Parkies PS match poster) |
+| `public/images/events/ium-career-fair/` | 5 photos: `ium-career-fair-group-chancery.jpeg`, `ium-career-fair-girls-group.jpeg`, `ium-career-fair-group-2.jpeg`, `ium-career-fair-with-representative.jpeg`, `ium-career-fair-group-3.jpeg` |
+| `public/images/events/smile-haven-visit/` | 8 photos: `smile-haven-visit-dr-eliakim-team.jpeg`, `smile-haven-visit-full-assembly.jpeg`, `smile-haven-visit-presentation-banner.jpeg`, `smile-haven-visit-learners-smiling.jpeg`, `smile-haven-visit-learner-dental-model.jpeg`, `smile-haven-visit-brushing-demo.jpeg`, `smile-haven-visit-young-learners.jpeg`, `smile-haven-visit-learners-assembly.jpeg` |
 
 ---
 
@@ -205,3 +209,11 @@ If push fails with 403, run the above. `KeenanHusselmann` keeps becoming the act
 - Added gymnastics gallery category with 4 images
 - Built `SpotlightWidget.tsx` — hover-cycling image slideshow for home page
 - Reordered spotlight page newest-first
+
+### July 2026
+- Added IUM Inbound Career Fair event (17 Jul 2026) — 5 photos renamed/moved to `public/images/events/ium-career-fair/`, added to notice board, gallery (Events category), home page widget, sitemap
+- Added Smile Haven dental hygiene visit (16 Jul 2026) — 8 photos renamed/moved to `public/images/events/smile-haven-visit/`, added to notice board, gallery, home page widget
+- Built `RecentEventsDrawer.tsx` — fixed right-side sliding tab/drawer showing 3 most recent events with photos, pulsing gold "N New" badge, calendar icon, gradient panel header; added to layout
+- Added images to notice board cards — featured banner image at top + scrollable thumbnail strip for all entries that have photos
+- Gallery: added Football and Events category filters (13 Events photos total)
+- `next.config.ts`: added `allowedDevOrigins: ["192.168.137.1"]` to suppress cross-origin HMR warning

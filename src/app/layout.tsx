@@ -9,6 +9,7 @@ import PageReveal from "@/components/ui/PageReveal";
 import PageRails from "@/components/ui/PageRails";
 import CookieConsent from "@/components/ui/CookieConsent";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import RecentEventsDrawer from "@/components/ui/RecentEventsDrawer";
 
 const GA_ID = "G-HXJ7XHMXDR";
 
@@ -121,6 +122,7 @@ export default function RootLayout({
         <ScrollToTop />
         <PageReveal />
         <WhatsAppButton />
+        <RecentEventsDrawer />
         <CookieConsent />
         {/* Google Analytics */}
         <Script
