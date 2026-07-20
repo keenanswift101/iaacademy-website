@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-const NEW_COUNT = 2;
+const NEW_COUNT = 3;
 
 export default function RecentEventsDrawer() {
   return (

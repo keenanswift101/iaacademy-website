@@ -340,9 +340,9 @@ export default function HomePage() {
             </div>
             <ul className="space-y-4">
               {[
+                { date: "Jul 2026", title: "Gymnastics — WRC Inter-Club: Silver for Hayley, Gold for Zoé. Hayley selected for SA Nationals in Cape Town!" },
                 { date: "17 Jul 2026", title: "Grade 11 & 12 learners attend IUM Inbound Career Fair" },
                 { date: "16 Jul 2026", title: "Smile Haven visits IA Academy — Dental Hygiene Awareness with Dr. LN Eliakim" },
-                { date: "30 Jun 2026", title: "Football vs Parkies PS — Game 1: Win 2–1 · Game 2: Loss 1–3" },
               ].map(({ date, title }) => (
                 <li key={title} className="flex gap-4">
                   <span

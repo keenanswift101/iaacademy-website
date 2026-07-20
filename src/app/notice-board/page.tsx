@@ -15,6 +15,18 @@ const notices: {
   images?: string[];
 }[] = [
   {
+    date: "Jul 2026",
+    category: "Sport",
+    title: "Gymnastics — WRC Inter-Club Competition: Silver for Hayley, Gold for Zoé",
+    body: "IA Academy celebrates two more podium finishes at the WRC Inter-Club Rhythmic Gymnastics Competition in July 2026. Hayley du Toit (Level 6) earned a well-deserved Silver medal, showcasing incredible dedication and technical skill. Zoé Lumé de Scande (Level 1) claimed Gold once again — a brilliant back-to-back performance after her win at the 1st Qualifying Competition in June. In addition, Hayley has been selected to represent her team at the South African national competition in Cape Town in September 2026 — a tremendous honour and a milestone for IA Academy. We are incredibly proud of both gymnasts!",
+    images: [
+      "/images/sports/gymnastics/gymnastics_5.jpeg",
+      "/images/sports/gymnastics/gymnastics_8.jpeg",
+      "/images/sports/gymnastics/gymnastics_7.jpeg",
+      "/images/sports/gymnastics/gymnastics_6.jpeg",
+    ],
+  },
+  {
     date: "17 Jul 2026",
     category: "Events",
     title: "Grade 11 & 12 learners attend IUM Inbound Career Fair",
