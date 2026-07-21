@@ -364,7 +364,89 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 8. CONTACT QUICK BAR ──────────────────────── */}
+      {/* ── 8. STUDENT SPOTLIGHT ─────────────────────── */}
+      <section
+        aria-labelledby="spotlight-heading"
+        className="px-6 py-20"
+        style={{ background: "var(--color-surface-container-low)" }}
+      >
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-10 text-center reveal">
+            <p className="mb-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--color-primary)" }}>Student Spotlight</p>
+            <h2 id="spotlight-heading" className="text-3xl font-bold" style={{ color: "var(--color-on-surface)" }}>Meet Our Athletes</h2>
+            <p className="mt-3 text-sm" style={{ color: "var(--color-on-surface-variant)" }}>Celebrating the achievements of IA Academy learners on and off the field.</p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2">
+            {[
+              {
+                href: "/spotlight/zoe-lume-de-scande",
+                image: "/images/sports/gymnastics/gymnastics_8.jpeg",
+                imagePos: "50% 20%",
+                name: "Zoé Lumé de Scande",
+                sport: "Rhythmic Gymnastics · Level 1",
+                badge: "🥇 Back-to-Back Gold",
+                detail: "Namibian 1st Qualifying Competition + WRC Inter-Club 2026",
+              },
+              {
+                href: "/spotlight/hayley-du-toit",
+                image: "/images/sports/gymnastics/gymnastics_5.jpeg",
+                imagePos: "50% 15%",
+                name: "Hayley du Toit",
+                sport: "Rhythmic Gymnastics · Level 6",
+                badge: "🥈 Silver · SA Nationals Bound",
+                detail: "Selected to represent Namibia at SA Nationals — Cape Town, Sep 2026",
+              },
+            ].map(({ href, image, imagePos, name, sport, badge, detail }) => (
+              <Link
+                key={href}
+                href={href}
+                className="group rounded-2xl overflow-hidden flex flex-col reveal"
+                style={{ background: "var(--color-surface-container-lowest)", boxShadow: "var(--shadow-ambient)", border: "1px solid rgba(94,0,129,0.18)", textDecoration: "none" }}
+              >
+                {/* Photo */}
+                <div className="relative overflow-hidden" style={{ height: "280px" }}>
+                  <Image
+                    src={image}
+                    alt={name}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    style={{ objectPosition: imagePos }}
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.60) 0%, transparent 55%)" }} aria-hidden="true" />
+                  <span
+                    className="absolute bottom-4 left-4 rounded-full px-3 py-1 text-xs font-bold"
+                    style={{ background: "rgba(240,192,64,0.95)", color: "#1a1c1e" }}
+                  >
+                    {badge}
+                  </span>
+                </div>
+
+                {/* Info */}
+                <div className="p-6 flex-1 flex flex-col">
+                  <p className="mb-1 text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--color-primary)" }}>{sport}</p>
+                  <h3 className="mb-2 text-lg font-bold" style={{ color: "var(--color-on-surface)" }}>{name}</h3>
+                  <p className="text-sm leading-relaxed flex-1" style={{ color: "var(--color-on-surface-variant)" }}>{detail}</p>
+                  <span className="mt-4 text-sm font-semibold" style={{ color: "var(--color-primary)" }}>View profile →</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              href="/spotlight"
+              className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold transition-transform hover:scale-105"
+              style={{ background: "var(--color-primary)", color: "#fff", textDecoration: "none" }}
+            >
+              All student spotlights →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 9. CONTACT QUICK BAR ──────────────────────── */}
       <section
         aria-labelledby="contact-bar-heading"
         className="px-6 py-16"
