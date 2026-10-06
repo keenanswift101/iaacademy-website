@@ -23,6 +23,12 @@ const achievements = [
   { event: "Junior World Championships (Romania)", year: "2025", result: "2 New National Records", note: "" },
   { event: "Africa Junior Championships (Luanda)", year: "2025", result: "1× Gold, 2× Silver, 3× Bronze", note: "1 New Namibian National Record" },
   { event: "Long Course Nationals (Windhoek)", year: "Feb 2026", result: "12× Gold, 1× Silver, 1× Bronze", note: "3 Trophies — best overall" },
+  { event: "National Swimming Championships (Swakopmund)", year: "Sep 2026", result: "6× Gold, 3× Silver, 1× Bronze", note: "10 medals from 10 events · Multiple PBs" },
+];
+
+const upcoming = [
+  { event: "Youth Olympic Games", location: "Dakar, Senegal 🇸🇳", dates: "27 Oct – 9 Nov 2026" },
+  { event: "Region 5 African Championships", location: "Mozambique 🇲🇿", dates: "3 – 15 Dec 2026" },
 ];
 
 export default function LorenzoSpotlightPage() {
@@ -63,7 +69,7 @@ export default function LorenzoSpotlightPage() {
                 Swimming · Namibia National Team
               </div>
               <h2 className="mb-1 text-3xl font-bold" style={{ color: "var(--color-on-surface)" }}>Lorenzo Ethan Esterhuizen</h2>
-              <p className="mb-6 text-sm font-medium" style={{ color: "var(--color-primary)" }}>Age 16 · Born 8 April 2009 · Windhoek, Namibia</p>
+              <p className="mb-6 text-sm font-medium" style={{ color: "var(--color-primary)" }}>Age 17 · Born 8 April 2009 · Windhoek, Namibia</p>
 
               <div className="space-y-4 text-base leading-relaxed" style={{ color: "var(--color-on-surface-variant)" }}>
                 <p>
@@ -103,14 +109,15 @@ export default function LorenzoSpotlightPage() {
       {/* Photo gallery strip */}
       <section className="px-6 py-8" style={{ background: "var(--color-surface-container-low)" }}>
         <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
             {[
+              { src: "/images/sports/swimming/lorenzo-national-championships-swakopmund-2026-medals.jpeg", alt: "Lorenzo's 10 medals from the 2026 National Swimming Championships in Swakopmund", pos: "object-bottom" },
               { src: "/images/sports/swimming/lorenzo-africa-junior-championships-medal.png", alt: "Lorenzo at the Africa Junior Championships, holding medal and mascot", pos: "object-top" },
               { src: "/images/sports/swimming/lorenzo-medals-collection.png", alt: "Lorenzo smiling next to his full medal collection", pos: "object-center" },
               { src: "/images/sports/swimming/lorenzo-namibia-team-africa-championships-algeria.jpeg", alt: "Namibia Aquatics team heading to the 17th Africa Championships in Algeria", pos: "object-top" },
             ].map(({ src, alt, pos }) => (
               <div key={src} className="relative aspect-4/3 overflow-hidden rounded-2xl" style={{ boxShadow: "var(--shadow-ambient)", border: "1px solid rgba(94,0,129,0.15)" }}>
-                <Image src={src} alt={alt} fill className={`object-cover ${pos}`} sizes="(max-width: 768px) 33vw, 25vw" />
+                <Image src={src} alt={alt} fill className={`object-cover ${pos}`} sizes="(max-width: 640px) 50vw, 25vw" />
               </div>
             ))}
           </div>
@@ -150,6 +157,19 @@ export default function LorenzoSpotlightPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+
+          {/* Upcoming competitions */}
+          <p className="mt-14 mb-2 text-sm font-semibold uppercase tracking-widest" style={{ color: "var(--color-primary)" }}>Up Next</p>
+          <h2 className="mb-8 text-2xl font-bold" style={{ color: "var(--color-on-surface)" }}>Representing Namibia</h2>
+          <div className="grid gap-6 sm:grid-cols-2">
+            {upcoming.map(({ event, location, dates }) => (
+              <div key={event} className="rounded-2xl p-6" style={{ background: "linear-gradient(135deg, rgba(94,0,129,0.10) 0%, rgba(240,192,64,0.08) 100%)", border: "1px solid rgba(94,0,129,0.20)" }}>
+                <p className="mb-1 text-xs font-semibold uppercase tracking-widest" style={{ color: "var(--color-primary)" }}>{dates}</p>
+                <h3 className="text-lg font-bold" style={{ color: "var(--color-on-surface)" }}>{event}</h3>
+                <p className="mt-1 text-sm" style={{ color: "var(--color-on-surface-variant)" }}>{location}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -340,9 +340,9 @@ export default function HomePage() {
             </div>
             <ul className="space-y-4">
               {[
+                { date: "27 Sep 2026", title: "Lorenzo Esterhuizen wins 10 medals in 10 events at the National Swimming Championships. Next stop: Dakar!" },
                 { date: "Jul 2026", title: "Gymnastics — WRC Inter-Club: Silver for Hayley, Gold for Zoé. Hayley selected for SA Nationals in Cape Town!" },
                 { date: "17 Jul 2026", title: "Grade 11 & 12 learners attend IUM Inbound Career Fair" },
-                { date: "16 Jul 2026", title: "Smile Haven visits IA Academy — Dental Hygiene Awareness with Dr. LN Eliakim" },
               ].map(({ date, title }) => (
                 <li key={title} className="flex gap-4">
                   <span
@@ -377,8 +377,17 @@ export default function HomePage() {
             <p className="mt-3 text-sm" style={{ color: "var(--color-on-surface-variant)" }}>Celebrating the achievements of IA Academy learners on and off the field.</p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
+              {
+                href: "/spotlight/lorenzo-esterhuizen",
+                image: "/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.png",
+                imagePos: "50% 0%",
+                name: "Lorenzo Esterhuizen",
+                sport: "Swimming · Namibia National Team",
+                badge: "🏅 10 Events, 10 Medals",
+                detail: "National Championships, Swakopmund, Sep 2026. Next: Youth Olympic Games in Dakar and Region 5 Africa Champs in Mozambique",
+              },
               {
                 href: "/spotlight/zoe-lume-de-scande",
                 image: "/images/sports/gymnastics/gymnastics_8.jpeg",

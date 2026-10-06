@@ -15,6 +15,16 @@ const notices: {
   images?: string[];
 }[] = [
   {
+    date: "27 Sep 2026",
+    category: "Sport",
+    title: "Lorenzo Esterhuizen — 10 events, 10 medals at the National Swimming Championships",
+    body: "Lorenzo Esterhuizen competed in 10 events at the National Swimming Championships in Swakopmund from 23 to 27 September 2026 — and came home with a medal in every single one (6 Gold, 3 Silver and 1 Bronze), along with some outstanding personal bests. Next up, Lorenzo will compete at the Youth Olympic Games in Dakar, Senegal 🇸🇳 from 27 October to 9 November 2026. Thereafter, he will represent Namibia at the Region 5 African Championships in Mozambique 🇲🇿 from 3 to 15 December 2026. Congratulations, Lorenzo — the whole IA Academy family is behind you!",
+    images: [
+      "/images/sports/swimming/lorenzo-national-championships-swakopmund-2026-medals.jpeg",
+      "/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.png",
+    ],
+  },
+  {
     date: "Jul 2026",
     category: "Sport",
     title: "Gymnastics — WRC Inter-Club Competition: Silver for Hayley, Gold for Zoé",
