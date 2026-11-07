@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const slides = [
+  { src: "/images/sports/swimming/lorenzo-youth-olympic-games-dakar-2026-final-results.jpeg", objectPosition: "50% 45%", contain: false },
+  { src: "/images/sports/swimming/lorenzo-youth-olympic-games-dakar-2026-poolside.jpeg", objectPosition: "45% 30%", contain: false },
   { src: "/images/sports/soccer_match1.png", objectPosition: "50% 50%", contain: true },
   { src: "/images/sports/gymnastics/gymnastics_3.png", objectPosition: "20% 30%", contain: false },
   { src: "/images/sports/gymnastics/gymnastics_1.png", objectPosition: "50% 22%", contain: false },
@@ -88,9 +90,9 @@ export default function SpotlightWidget() {
           <h2 className="text-xl font-bold" style={{ color: "var(--color-on-surface)" }}>IA Academy in Action</h2>
           <span className="text-sm font-semibold transition-colors group-hover:opacity-80" style={{ color: "var(--color-primary)" }}>Read more →</span>
         </div>
-        <p className="text-xs font-semibold mb-3 uppercase tracking-wide" style={{ color: "var(--color-primary)" }}>Sport · June 2026</p>
+        <p className="text-xs font-semibold mb-3 uppercase tracking-wide" style={{ color: "var(--color-primary)" }}>Sport · November 2026</p>
         <p className="text-sm leading-relaxed" style={{ color: "var(--color-on-surface-variant)" }}>
-          Football vs Parkies PS — Win 2–1, Loss 1–3 · Gymnastics gold for Zoé &amp; silver for Hayley at the Namibian Qualifying Competition, Walvis Bay.
+          Lorenzo Esterhuizen finishes 7th in the world in the 200m butterfly final at the Youth Olympic Games, Dakar 2026 · Football vs Parkies PS — Win 2–1, Loss 1–3 · Gymnastics gold for Zoé &amp; silver for Hayley.
         </p>
       </div>
     </Link>
