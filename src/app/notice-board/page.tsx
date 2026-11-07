@@ -15,6 +15,16 @@ const notices: {
   images?: string[];
 }[] = [
   {
+    date: "Nov 2026",
+    category: "Sport",
+    title: "Lorenzo Esterhuizen — 7th in the world at the Youth Olympic Games, Dakar 2026",
+    body: "Lorenzo Esterhuizen clocked 2:10.82 to finish third in his heat at the Complexe Tour de l'Œuf in Dakar, Senegal 🇸🇳, qualifying sixth-fastest for the men's 200m butterfly final at the Youth Olympic Games. In the final he went even faster, touching in 2:10.17 to finish 7th in the world. Lorenzo, IA Academy is truly proud of your achievements!",
+    images: [
+      "/images/sports/swimming/lorenzo-youth-olympic-games-dakar-2026-poolside.jpeg",
+      "/images/sports/swimming/lorenzo-youth-olympic-games-dakar-2026-final-results.jpeg",
+    ],
+  },
+  {
     date: "27 Sep 2026",
     category: "Sport",
     title: "Lorenzo Esterhuizen — 10 events, 10 medals at the National Swimming Championships",

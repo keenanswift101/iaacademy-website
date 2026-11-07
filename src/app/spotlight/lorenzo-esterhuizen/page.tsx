@@ -5,7 +5,7 @@ import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
   title: "Lorenzo Esterhuizen — Student Spotlight",
-  description: "Lorenzo Esterhuizen is a Namibian Junior National Swimming Champion and IA Academy student, with multiple national records and Olympic ambitions for Dakar 2026 and Los Angeles 2028.",
+  description: "Lorenzo Esterhuizen is a Namibian Junior National Swimming Champion and IA Academy student who finished 7th in the world in the men's 200m butterfly final at the Youth Olympic Games Dakar 2026, with his sights set on Los Angeles 2028.",
 };
 
 const achievements = [
@@ -24,10 +24,10 @@ const achievements = [
   { event: "Africa Junior Championships (Luanda)", year: "2025", result: "1× Gold, 2× Silver, 3× Bronze", note: "1 New Namibian National Record" },
   { event: "Long Course Nationals (Windhoek)", year: "Feb 2026", result: "12× Gold, 1× Silver, 1× Bronze", note: "3 Trophies — best overall" },
   { event: "National Swimming Championships (Swakopmund)", year: "Sep 2026", result: "6× Gold, 3× Silver, 1× Bronze", note: "10 medals from 10 events · Multiple PBs" },
+  { event: "Youth Olympic Games (Dakar, Senegal)", year: "Nov 2026", result: "7th — 200m Butterfly Final (2:10.17)", note: "7th in the world · Qualified 6th-fastest (2:10.82)" },
 ];
 
 const upcoming = [
-  { event: "Youth Olympic Games", location: "Dakar, Senegal 🇸🇳", dates: "27 Oct – 9 Nov 2026" },
   { event: "Region 5 African Championships", location: "Mozambique 🇲🇿", dates: "3 – 15 Dec 2026" },
 ];
 
@@ -53,14 +53,18 @@ export default function LorenzoSpotlightPage() {
             <div className="w-full lg:w-5/12 flex-shrink-0">
               <div className="overflow-hidden rounded-2xl" style={{ boxShadow: "var(--shadow-ambient)", border: "1px solid rgba(94,0,129,0.15)" }}>
                 <Image
-                  src="/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.png"
-                  alt="Lorenzo Esterhuizen on the podium at the African Youth Games in Angola"
-                  width={600}
-                  height={750}
+                  src="/images/sports/swimming/lorenzo-youth-olympic-games-dakar-2026-poolside.jpeg"
+                  alt="Lorenzo Esterhuizen on the pool deck at the Youth Olympic Games in Dakar, 2026"
+                  width={484}
+                  height={340}
                   className="w-full h-auto object-cover"
+                  sizes="(max-width: 1024px) 100vw, 420px"
                   priority
                 />
               </div>
+              <p className="mt-2 text-center text-xs" style={{ color: "var(--color-on-surface-variant)" }}>
+                Youth Olympic Games, Dakar 2026 · Photo: Namibia National Olympic Committee
+              </p>
             </div>
 
             {/* Bio */}
@@ -78,13 +82,16 @@ export default function LorenzoSpotlightPage() {
                 <p>
                   Lorenzo has proudly represented Namibia at national and international level — including the South African Junior Swimming Championships and the Africa Aquatics Junior Championships — and is now setting his sights on even greater milestones.
                 </p>
+                <p>
+                  At the 2026 Youth Olympic Games in Dakar, Senegal, Lorenzo qualified sixth-fastest for the men&apos;s 200m butterfly final and went on to finish <strong style={{ color: "var(--color-on-surface)" }}>7th in the world</strong>.
+                </p>
               </div>
 
               {/* Vision callout */}
               <div className="mt-8 rounded-2xl p-6" style={{ background: "linear-gradient(135deg, rgba(94,0,129,0.10) 0%, rgba(240,192,64,0.08) 100%)", border: "1px solid rgba(94,0,129,0.20)" }}>
                 <p className="mb-1 text-xs font-semibold uppercase tracking-widest" style={{ color: "var(--color-primary)" }}>Vision</p>
                 <p className="text-base font-semibold leading-snug" style={{ color: "var(--color-on-surface)" }}>
-                  To represent Namibia at the 2026 Youth Olympic Games in Dakar — and ultimately at the 2028 Olympic Games in Los Angeles.
+                  Represented Namibia at the 2026 Youth Olympic Games in Dakar — next, the 2028 Olympic Games in Los Angeles.
                 </p>
               </div>
 
@@ -92,7 +99,7 @@ export default function LorenzoSpotlightPage() {
               <div className="mt-8 grid grid-cols-3 gap-4">
                 {[
                   { value: "14+", label: "National Records" },
-                  { value: "2026", label: "Youth Olympics — Dakar" },
+                  { value: "7th", label: "In the world — Youth Olympics 200m Fly" },
                   { value: "2028", label: "Olympic Goal — LA" },
                 ].map(({ value, label }) => (
                   <div key={label} className="rounded-xl p-4 text-center" style={{ background: "var(--color-surface-container)", border: "1px solid rgba(94,0,129,0.12)" }}>
@@ -106,11 +113,47 @@ export default function LorenzoSpotlightPage() {
         </div>
       </section>
 
+      {/* Youth Olympic Games Dakar 2026 */}
+      <section className="px-6 py-16" style={{ background: "var(--color-surface-container-low)" }}>
+        <div className="mx-auto max-w-5xl">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-widest" style={{ color: "var(--color-primary)" }}>Youth Olympic Games · Dakar 2026</p>
+          <h2 className="mb-3 text-2xl font-bold" style={{ color: "var(--color-on-surface)" }}>7th in the world — Men&apos;s 200m Butterfly</h2>
+          <p className="mb-8 max-w-3xl text-base leading-relaxed" style={{ color: "var(--color-on-surface-variant)" }}>
+            Lorenzo clocked 2:10.82 to finish third in his heat at the Complexe Tour de l&apos;Œuf in Dakar, qualifying sixth-fastest for the final. In the final he went quicker again, touching in 2:10.17 to finish 7th. IA Academy is truly proud of your achievements, Lorenzo!
+          </p>
+
+          <div className="grid gap-6 lg:grid-cols-2">
+            <div className="overflow-hidden rounded-2xl bg-black" style={{ boxShadow: "var(--shadow-ambient)", border: "1px solid rgba(94,0,129,0.15)" }}>
+              <video
+                className="aspect-video w-full"
+                controls
+                playsInline
+                preload="metadata"
+                poster="/images/sports/swimming/lorenzo-youth-olympic-games-dakar-2026-final-poster.jpeg"
+                aria-label="Broadcast footage of Lorenzo Esterhuizen being introduced for the men's 200m butterfly final at the Youth Olympic Games Dakar 2026"
+              >
+                <source src="/images/sports/swimming/lorenzo-youth-olympic-games-dakar-2026-final.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div className="relative aspect-video overflow-hidden rounded-2xl" style={{ boxShadow: "var(--shadow-ambient)", border: "1px solid rgba(94,0,129,0.15)" }}>
+              <Image
+                src="/images/sports/swimming/lorenzo-youth-olympic-games-dakar-2026-final-results.jpeg"
+                alt="Youth Olympic Games Dakar 2026 men's 200m butterfly final results — Lorenzo Esterhuizen (NAM) 7th in 2:10.17"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Photo gallery strip */}
       <section className="px-6 py-8" style={{ background: "var(--color-surface-container-low)" }}>
         <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
             {[
+              { src: "/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.png", alt: "Lorenzo Esterhuizen on the podium at the African Youth Games in Angola", pos: "object-top" },
               { src: "/images/sports/swimming/lorenzo-national-championships-swakopmund-2026-medals.jpeg", alt: "Lorenzo's 10 medals from the 2026 National Swimming Championships in Swakopmund", pos: "object-bottom" },
               { src: "/images/sports/swimming/lorenzo-africa-junior-championships-medal.png", alt: "Lorenzo at the Africa Junior Championships, holding medal and mascot", pos: "object-top" },
               { src: "/images/sports/swimming/lorenzo-medals-collection.png", alt: "Lorenzo smiling next to his full medal collection", pos: "object-center" },

@@ -18,6 +18,8 @@ const allImages: { src: string; alt: string; category: Exclude<Category, "All">;
   { src: "/images/school-life-10.jpeg", alt: "School environment", category: "School Life" },
   { src: "/images/school-life-11.jpeg", alt: "Pupils at IA Academy", category: "School Life" },
   { src: "/images/school-life-12.jpeg", alt: "Life at IA Academy", category: "School Life" },
+  { src: "/images/sports/swimming/lorenzo-youth-olympic-games-dakar-2026-poolside.jpeg", alt: "Lorenzo Esterhuizen on the pool deck at the Youth Olympic Games, Dakar 2026 (Photo: Namibia National Olympic Committee)", category: "Swimming", objectPosition: "40% 30%" },
+  { src: "/images/sports/swimming/lorenzo-youth-olympic-games-dakar-2026-final-results.jpeg", alt: "Youth Olympic Games Dakar 2026 men's 200m butterfly final results — Lorenzo Esterhuizen 7th", category: "Swimming", objectPosition: "50% 50%" },
   { src: "/images/sports/swimming/lorenzo-national-championships-swakopmund-2026-medals.jpeg", alt: "Lorenzo Esterhuizen's 10 medals from the National Swimming Championships, Swakopmund 2026", category: "Swimming", objectPosition: "50% 70%" },
   { src: "/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.png", alt: "Lorenzo Esterhuizen on the podium at the Africa Youth Games in Angola", category: "Swimming", objectPosition: "50% 0%" },
   { src: "/images/sports/swimming/lorenzo-africa-junior-championships-medal.png", alt: "Lorenzo at the Africa Junior Championships holding medal", category: "Swimming", objectPosition: "50% 0%" },

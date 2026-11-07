@@ -340,10 +340,10 @@ export default function HomePage() {
             </div>
             <ul className="space-y-4">
               {[
+                { date: "Nov 2026", title: "Lorenzo Esterhuizen finishes 7th in the world in the 200m butterfly final at the Youth Olympic Games, Dakar 2026!", image: "/images/sports/swimming/lorenzo-youth-olympic-games-dakar-2026-poolside.jpeg" },
                 { date: "27 Sep 2026", title: "Lorenzo Esterhuizen wins 10 medals in 10 events at the National Swimming Championships. Next stop: Dakar!" },
                 { date: "Jul 2026", title: "Gymnastics — WRC Inter-Club: Silver for Hayley, Gold for Zoé. Hayley selected for SA Nationals in Cape Town!" },
-                { date: "17 Jul 2026", title: "Grade 11 & 12 learners attend IUM Inbound Career Fair" },
-              ].map(({ date, title }) => (
+              ].map(({ date, title, image }) => (
                 <li key={title} className="flex gap-4">
                   <span
                     className="mt-0.5 text-xs font-medium"
@@ -351,9 +351,15 @@ export default function HomePage() {
                   >
                     {date}
                   </span>
-                  <span className="text-sm leading-relaxed" style={{ color: "var(--color-on-surface-variant)" }}>
+                  <span className="flex-1 text-sm leading-relaxed" style={{ color: "var(--color-on-surface-variant)" }}>
                     {title}
                   </span>
+                  {image && (
+                    <span className="relative h-14 w-14 flex-shrink-0 overflow-hidden rounded-lg" style={{ border: "1px solid rgba(94,0,129,0.18)" }}>
+                      {/* Decorative: the headline beside it already describes the photo */}
+                      <Image src={image} alt="" fill className="object-cover" style={{ objectPosition: "45% 25%" }} sizes="56px" />
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -381,12 +387,12 @@ export default function HomePage() {
             {[
               {
                 href: "/spotlight/lorenzo-esterhuizen",
-                image: "/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.png",
-                imagePos: "50% 0%",
+                image: "/images/sports/swimming/lorenzo-youth-olympic-games-dakar-2026-poolside.jpeg",
+                imagePos: "45% 30%",
                 name: "Lorenzo Esterhuizen",
                 sport: "Swimming · Namibia National Team",
-                badge: "🏅 10 Events, 10 Medals",
-                detail: "National Championships, Swakopmund, Sep 2026. Next: Youth Olympic Games in Dakar and Region 5 Africa Champs in Mozambique",
+                badge: "🌍 7th in the World",
+                detail: "Youth Olympic Games Dakar 2026 — 200m Butterfly final. Next: Region 5 Africa Champs in Mozambique",
               },
               {
                 href: "/spotlight/zoe-lume-de-scande",

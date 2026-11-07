@@ -37,9 +37,9 @@ const spotlights = [
     href: "/spotlight/lorenzo-esterhuizen",
     name: "Lorenzo Esterhuizen",
     tag: "Swimming · Namibia National Team",
-    summary: "Namibian Junior National Swimming Champion with 14+ national records and 10 medals from 10 events at the 2026 National Championships. Next: Youth Olympics Dakar 2026, Region 5 Africa Champs in Mozambique, and the LA 2028 dream.",
-    image: "/images/sports/swimming/lorenzo-africa-youth-games-angola-podium.png",
-    badge: "Olympic Hopeful — Youth Olympics Dakar 2026",
+    summary: "Namibian Junior National Swimming Champion with 14+ national records. Finished 7th in the world in the men's 200m butterfly final at the Youth Olympic Games Dakar 2026. Next: Region 5 Africa Champs in Mozambique, and the LA 2028 dream.",
+    image: "/images/sports/swimming/lorenzo-youth-olympic-games-dakar-2026-poolside.jpeg",
+    badge: "7th in the World — Youth Olympics Dakar 2026",
   },
 ];
 
